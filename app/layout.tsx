@@ -1,17 +1,11 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
 import "./globals.css";
-import TopHeader from "@/components/TopHeader";
-import Navbar from "@/components/Navbar";
+import Preloader from "@/components/Preloader";
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import GoToTop from "@/components/GoToTop";
-
-const poppins = Poppins({
-  variable: "--font-poppins",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  display: "swap",
-});
+import GoTop from "@/components/GoTop";
+import DemoToolbar from "@/components/DemoToolbar";
+import Wow from "@/components/Wow";
 
 export const metadata: Metadata = {
   title: "StartNext – IT Startup & Technology Services",
@@ -25,13 +19,29 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${poppins.variable}`}>
-      <body className="font-[family-name:var(--font-poppins)]">
-        <TopHeader />
-        <Navbar />
-        <main>{children}</main>
+    <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        />
+      </head>
+      <body>
+        <Preloader />
+        <Header />
+        <div id="content" className="site-content">
+          {children}
+        </div>
         <Footer />
-        <GoToTop />
+        <GoTop />
+        <DemoToolbar />
+        <Wow />
       </body>
     </html>
   );

@@ -1,89 +1,104 @@
 "use client";
 
-import Image from "next/image";
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import SectionTitle from "@/components/SectionTitle";
-import { TESTIMONIALS } from "@/constants";
+import { useEffect, useState } from "react";
+import FeatherIcon from "@/components/FeatherIcon";
+
+const UPLOAD = "https://themes.envytheme.com/startp/wp-content/uploads";
+
+const TEXT =
+  "Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+
+const feedback = [
+  { img: "2020/11/client-1.jpg", name: "Maxwel Warner" },
+  { img: "2020/11/client-2.jpg", name: "Steven Smith" },
+  { img: "2020/11/client-3.jpg", name: "Luice Lucy" },
+  { img: "2020/11/client-4.jpg", name: "Jhon Terry" },
+  { img: "2020/11/client-5.jpg", name: "Ayan Mitchel" },
+  { img: "2020/11/client-1.jpg", name: "Steven Smith" },
+  { img: "2020/11/client-4.jpg", name: "Maxwel Warner" },
+];
+
+const N = feedback.length;
+const mod = (n: number) => ((n % N) + N) % N;
 
 export default function Testimonials() {
-  const [current, setCurrent] = useState(0);
-  const total = TESTIMONIALS.length;
-
-  const goTo = (index: number) => setCurrent(index);
+  const [active, setActive] = useState(0);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % total);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [total]);
+    const id = setInterval(() => setActive((a) => mod(a + 1)), 5000);
+    return () => clearInterval(id);
+  }, []);
 
-  const testimonial = TESTIMONIALS[current];
+  const current = feedback[active];
+  // centerMode window of 5 thumbnails centered on the active item.
+  const window5 = [-2, -1, 0, 1, 2].map((off) => mod(active + off));
 
   return (
-    <section className="ptb-80 bg-bg-light">
-      <div className="container">
-        <SectionTitle
-          title="What Users Saying"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        />
+    <section className="feedback-area ptb-80 bg-f7fafd">
+      <div className="section-title ">
+        <h2>What Users Saying</h2>
+        <div className="bar"></div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
 
-        <div className="max-w-3xl mx-auto">
-          {/* Main feedback */}
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={current}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="text-center"
-            >
-              <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-5 border-4 border-main">
-                <Image
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  width={80}
-                  height={80}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <h3 className="text-xl font-semibold text-heading mb-1">
-                {testimonial.name}
-              </h3>
-              <span className="text-secondary text-sm font-medium">
-                {testimonial.role}
-              </span>
-              <p className="mt-5 text-base leading-relaxed max-w-xl mx-auto">
-                {testimonial.text}
-              </p>
-            </motion.div>
-          </AnimatePresence>
-
-          {/* Thumbnail Navigation */}
-          <div className="flex items-center justify-center gap-3 mt-8">
-            {TESTIMONIALS.map((t, i) => (
-              <button
-                key={i}
-                onClick={() => goTo(i)}
-                className={`w-12 h-12 rounded-full overflow-hidden transition-all duration-300 cursor-pointer ${
-                  i === current
-                    ? "border-2 border-main scale-110"
-                    : "border-2 border-transparent opacity-50 hover:opacity-80"
-                }`}
-                aria-label={`Testimonial from ${t.name}`}
+      <div className="feedback-slides">
+        <div className="client-feedback">
+          <div>
+            <div className="item">
+              <div
+                className="single-feedback"
+                key={active}
+                style={{ animation: "fadeIn 0.6s" }}
               >
-                <Image
-                  src={t.image}
-                  alt={t.name}
-                  width={48}
-                  height={48}
-                  className="w-full h-full object-cover"
-                />
-              </button>
+                <div className="client-img">
+                  <img src={`${UPLOAD}/${current.img}`} alt={current.name} />
+                </div>
+                <h3>{current.name}</h3>
+                <span>Web Developer</span>
+                <p>{TEXT}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="client-thumbnails">
+          <div style={{ display: "flex", alignItems: "center" }}>
+            {window5.map((realIndex, i) => (
+              <div
+                key={`${realIndex}-${i}`}
+                className={`item ${i === 2 ? "slick-center" : ""}`}
+                style={{ flex: "0 0 20%", maxWidth: "20%" }}
+                onClick={() => setActive(realIndex)}
+              >
+                <div className="img-fill">
+                  <img
+                    src={`${UPLOAD}/${feedback[realIndex].img}`}
+                    alt={feedback[realIndex].name}
+                  />
+                </div>
+              </div>
             ))}
           </div>
+
+          <button
+            type="button"
+            className="prev-arrow slick-arrow"
+            onClick={() => setActive((a) => mod(a - 1))}
+            aria-label="Previous"
+          >
+            <FeatherIcon name="arrow-left" />
+          </button>
+          <button
+            type="button"
+            className="next-arrow slick-arrow"
+            onClick={() => setActive((a) => mod(a + 1))}
+            aria-label="Next"
+          >
+            <FeatherIcon name="arrow-right" />
+          </button>
         </div>
       </div>
     </section>

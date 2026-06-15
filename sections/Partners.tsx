@@ -1,48 +1,27 @@
-"use client";
+const UPLOAD = "https://themes.envytheme.com/startp/wp-content/uploads/2020/11";
 
-import Image from "next/image";
-import { motion } from "framer-motion";
-import { PARTNER_LOGOS } from "@/constants";
+const partners = [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18, 6, 2];
 
 export default function Partners() {
   return (
-    <section className="relative -mt-12 z-10 pb-20">
+    <div className="partner-area partner-section ">
       <div className="container">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="bg-white rounded-lg shadow-xl px-8 py-10"
-        >
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center">
-            {PARTNER_LOGOS.map((partner, i) => (
-              <a
-                key={i}
-                href="#"
-                className="group flex items-center justify-center p-3 transition-all"
-              >
-                {/* Default (grayscale) */}
-                <Image
-                  src={partner.defaultImage}
-                  alt={partner.alt}
-                  width={130}
-                  height={60}
-                  className="block group-hover:hidden opacity-60 hover:opacity-100 transition-opacity object-contain"
-                />
-                {/* Hover (color) */}
-                <Image
-                  src={partner.hoverImage}
-                  alt={partner.alt}
-                  width={130}
-                  height={60}
-                  className="hidden group-hover:block object-contain"
-                />
-              </a>
+        <h5>
+          More that 1.5 million businesses and organizations use StartNext
+        </h5>
+        <div className="partner-inner">
+          <div className="row">
+            {partners.map((n, i) => (
+              <div className="col-lg-2 col-md-3 col-6" key={`${n}-${i}`}>
+                <a href="#">
+                  <img src={`${UPLOAD}/partner-${n}.png`} alt="partner" />
+                  <img src={`${UPLOAD}/partner-hover${n}.png`} alt="partner" />
+                </a>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
-    </section>
+    </div>
   );
 }

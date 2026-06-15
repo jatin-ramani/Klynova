@@ -1,0 +1,13 @@
+
+> marketting@0.1.0 dev E:\office\marketting
+> next dev
+
+⚠ Port 3000 is in use by process 21292, using available port 3001 instead.
+▲ Next.js 16.2.9 (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://192.168.1.47:3001
+✓ Ready in 1632ms
+
+ GET / 200 in 1819ms (next.js: 508ms, application-code: 1312ms)
+ GET / 200 in 622ms (next.js: 9ms, application-code: 613ms)
+ GET / 200 in 5.4s (next.js: 209ms, application-code: 5.2s)

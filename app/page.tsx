@@ -1,9 +1,9 @@
-import HeroBanner from "@/sections/HeroBanner";
-import ServiceBoxes from "@/sections/ServiceBoxes";
+import MainBanner from "@/sections/MainBanner";
+import Boxes from "@/sections/Boxes";
 import CloudHosting from "@/sections/CloudHosting";
 import DesignDevelopment from "@/sections/DesignDevelopment";
 import Features from "@/sections/Features";
-import TeamSection from "@/sections/TeamSection";
+import Team from "@/sections/Team";
 import FunFacts from "@/sections/FunFacts";
 import RecentWorks from "@/sections/RecentWorks";
 import PricingPlans from "@/sections/PricingPlans";
@@ -15,12 +15,12 @@ import BlogSection from "@/sections/BlogSection";
 export default function Home() {
   return (
     <>
-      <HeroBanner />
-      <ServiceBoxes />
+      <MainBanner />
+      <Boxes />
       <CloudHosting />
       <DesignDevelopment />
       <Features />
-      <TeamSection />
+      <Team />
       <FunFacts />
       <RecentWorks />
       <PricingPlans />

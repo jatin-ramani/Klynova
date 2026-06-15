@@ -12,7 +12,16 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Reference assets downloaded from the live theme.
+    "scratch/**",
   ]),
+  {
+    // The clone reproduces the theme's exact DOM, which positions bare <img>
+    // elements via CSS. next/image would alter that structure, so allow <img>.
+    rules: {
+      "@next/next/no-img-element": "off",
+    },
+  },
 ]);
 
 export default eslintConfig;

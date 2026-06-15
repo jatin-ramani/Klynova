@@ -10,3 +10,142 @@
 @import "./theme/startnext-style.css";
 @import "./theme/brink-pink-style.css";
 @import "./theme/startnext-responsive.css";
+
+/* ─────────────────────────────────────────────────────────────
+   Clone-specific helpers (kept minimal; theme CSS owns the look)
+   ───────────────────────────────────────────────────────────── */
+
+/* Prevent horizontal scroll from banner shapes / full-bleed carousels. */
+body {
+  overflow-x: hidden;
+}
+
+/* WOW.js parity: hide animated elements until revealed by <Wow />. */
+.wow {
+  visibility: hidden;
+}
+
+/* ── Mobile navigation (dedicated bar; replaces the theme's meanmenu) ── */
+.clone-mnav {
+  display: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .clone-mnav {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  /* Hide the desktop nav (matches the theme) and show our own bar. */
+  .startp-nav {
+    display: none !important;
+  }
+  .clone-mnav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+    padding: 15px;
+  }
+  .clone-mnav .clone-mnav-logo {
+    display: inline-block;
+    flex: 0 0 auto;
+  }
+  .clone-mnav .clone-mnav-logo img {
+    max-height: 35px;
+    width: auto;
+  }
+  .clone-mnav-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex: 0 0 auto;
+  }
+  .clone-mnav-right .cart-link {
+    position: relative;
+    margin: 0;
+  }
+  .clone-mnav-burger {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .clone-mnav-burger span {
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: #0e314c;
+    transition: 0.3s;
+  }
+  .clone-mnav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-height: 75vh;
+    overflow-y: auto;
+    padding: 8px 0;
+    z-index: 999;
+  }
+  .clone-mnav-menu.open {
+    display: block;
+  }
+  .clone-mnav-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .clone-mnav-menu > ul {
+    padding: 0 20px;
+  }
+  .clone-mnav-menu li > a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    color: #4a6f8a;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: capitalize;
+    border-bottom: 1px solid #eeeeee;
+  }
+  .clone-mnav-menu li.active > a,
+  .clone-mnav-menu li > a:hover {
+    color: #f48665;
+  }
+  .clone-mnav-menu ul ul {
+    display: none;
+    padding-left: 14px;
+  }
+  .clone-mnav-menu li.open > ul {
+    display: block;
+  }
+  .clone-mnav-menu .mnav-caret {
+    font-size: 11px;
+    transition: 0.3s;
+  }
+  .clone-mnav-menu li.open > a .mnav-caret {
+    transform: rotate(180deg);
+  }
+}
+
+/* Feedback slider fade (slick replacement). */
+@keyframes ffFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
