@@ -1,0 +1,9 @@
+<svg width="220" height="52" viewBox="0 0 220 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="22" height="22" rx="5" fill="#5B8BF5"/>
+  <rect x="26" y="0" width="22" height="22" rx="5" fill="#5B8BF5" fill-opacity="0.55"/>
+  <rect x="0" y="26" width="22" height="22" rx="5" fill="#1DCFAA" fill-opacity="0.8"/>
+  <rect x="26" y="26" width="22" height="22" rx="5" fill="#5B8BF5" fill-opacity="0.25"/>
+  <text x="62" y="36" font-family="'Inter','Plus Jakarta Sans',system-ui,sans-serif" font-size="30" font-weight="600" letter-spacing="-0.5" fill="#FFFFFF">
+    <tspan fill="#5B8BF5">K</tspan><tspan fill="#FFFFFF">lynova</tspan>
+  </text>
+</svg>

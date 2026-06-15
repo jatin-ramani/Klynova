@@ -43,7 +43,7 @@ Default CSS
 =================================================*/
 :root {
   --SaaSmainColor: #7E05FF;
-  --MainColor: #44ce6f;
+  --MainColor: #1DCFAA;
   --SaaColor1: #8F8AD2;
   --light-green-50: #DFF7DF;
   --SaaColor2: #FFF6EA;
@@ -53,11 +53,11 @@ Default CSS
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
   padding: 0;
   margin: 0;
   font-size: 14px;
-  color: #666666;
+  color: #6B7280;
   line-height: 1.8;
   overflow-x: hidden;
 }
@@ -68,7 +68,7 @@ img {
 }
 
 a {
-  color: #0e314c;
+  color: #111827;
   display: inline-block;
   transition: 0.5s;
   text-decoration: none;
@@ -91,7 +91,7 @@ button:focus {
 }
 
 p {
-  color: #666666;
+  color: #6B7280;
   line-height: 1.8;
   margin-bottom: 15px;
 }
@@ -100,7 +100,7 @@ p:last-child {
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-  color: #0e314c;
+  color: #111827;
   font-weight: 500;
 }
 
@@ -122,7 +122,7 @@ p:last-child {
 }
 
 .bg-f9f6f6 {
-  background-color: #f9f6f6;
+  background-color: #F5F7FF;
 }
 
 .bg-0f054b {
@@ -149,13 +149,13 @@ p:last-child {
 /*btn btn-primary*/
 .btn-primary {
   color: #ffffff;
-  box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
+  box-shadow: 0 13px 27px 0 rgba(91, 139, 245, 0.25);
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   color: #ffffff;
-  background: #0e314c;
+  background: #111827;
   transform: translateY(-5px);
-  box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
+  box-shadow: 0 13px 27px 0 rgba(91, 139, 245, 0.25);
 }
 .btn-primary.focus, .btn-primary:focus {
   box-shadow: unset;
@@ -165,18 +165,18 @@ p:last-child {
 }
 .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .btn-primary .show > .btn-primary.dropdown-toggle {
   color: #ffffff;
-  background: #0e314c;
+  background: #111827;
   transform: translateY(-5px);
-  box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
+  box-shadow: 0 13px 27px 0 rgba(91, 139, 245, 0.25);
 }
 .btn-primary.disabled, .btn-primary:disabled {
   color: #ffffff;
-  box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
+  box-shadow: 0 13px 27px 0 rgba(91, 139, 245, 0.25);
   opacity: 1;
 }
 .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary:disabled:hover, .btn-primary:disabled:focus {
-  background: #0e314c;
-  box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
+  background: #111827;
+  box-shadow: 0 13px 27px 0 rgba(91, 139, 245, 0.25);
 }
 
 .btn {
@@ -217,7 +217,7 @@ p:last-child {
 }
 
 label {
-  color: #0e314c;
+  color: #111827;
   font-size: 15px;
   font-weight: 500;
   margin-bottom: 10px;
@@ -227,7 +227,7 @@ label {
   height: 50px;
   padding: 8px 15px;
   font-size: 14px;
-  color: #0e314c;
+  color: #111827;
   border: 1px solid #eeeeee;
   border-radius: 0;
   background: #eeeeee;
@@ -258,7 +258,7 @@ label {
 .section-title .bar {
   height: 5px;
   width: 90px;
-  background: #cdf1d8;
+  background: #E8EDFF;
   margin: 20px auto;
   position: relative;
   border-radius: 30px;
@@ -395,7 +395,7 @@ Navbar CSS
   font-weight: 500;
   font-size: 15px;
   text-transform: capitalize;
-  color: #4a6f8a;
+  color: #6B7280;
   padding-left: 0;
   padding-right: 6px;
   padding-top: 10px;
@@ -422,7 +422,7 @@ Navbar CSS
 }
 .startp-nav nav .others-option .btn.btn-light {
   background: transparent;
-  border: 2px dashed #cdf1d8;
+  border: 2px dashed #E8EDFF;
   padding: 12px 33px;
   margin-right: 10px;
 }
@@ -430,10 +430,10 @@ Navbar CSS
   color: #ffffff;
 }
 .startp-nav nav .others-option .btn.btn-primary {
-  box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
+  box-shadow: 0 13px 27px 0 rgba(91, 139, 245, 0.25);
 }
 .startp-nav nav .others-option .btn.btn-primary::after, .startp-nav nav .others-option .btn.btn-primary::before {
-  box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
+  box-shadow: 0 13px 27px 0 rgba(91, 139, 245, 0.25);
 }
 .startp-nav.is-sticky {
   position: fixed;
@@ -457,7 +457,7 @@ Navbar CSS
 .startp-nav .navbar-light .navbar-nav .dropdown-menu .dropdown-item {
   margin: 0 !important;
   padding: 5px 20px !important;
-  color: #4a6f8a;
+  color: #6B7280;
   font-size: 15px;
   background-color: #fff;
 }
@@ -861,7 +861,7 @@ Boxes CSS
 }
 
 .single-box {
-  border: 1px dashed #cdf1d8;
+  border: 1px dashed #E8EDFF;
   padding: 30px 20px;
   position: relative;
   z-index: 1;
@@ -876,7 +876,7 @@ Boxes CSS
   width: 55px;
   height: 55px;
   line-height: 55px;
-  background: #cdf1d8;
+  background: #E8EDFF;
   border-radius: 50%;
   transition: 0.5s;
   font-size: 18px;
@@ -888,7 +888,7 @@ Boxes CSS
   transition: 0.5s;
 }
 .single-box h3 a {
-  color: #0e314c;
+  color: #111827;
 }
 .single-box h3 a:hover {
   text-decoration: underline;
@@ -1238,7 +1238,7 @@ Services CSS
   width: 55px;
   height: 55px;
   line-height: 55px;
-  background: #cdf1d8;
+  background: #E8EDFF;
   border-radius: 50%;
   transition: 0.5s;
   font-size: 20px;
@@ -1321,7 +1321,7 @@ Features CSS
   width: 55px;
   height: 55px;
   line-height: 55px;
-  background: #cdf1d8;
+  background: #E8EDFF;
   border-radius: 50%;
   left: 20px;
   top: 30px;
@@ -1372,7 +1372,7 @@ Team CSS
   padding-right: 35px;
 }
 .single-team .team-image img {
-  border: 3px solid #cdf1d8;
+  border: 3px solid #E8EDFF;
   width: auto !important;
   border-radius: 50%;
   display: inline-block !important;
@@ -1383,7 +1383,7 @@ Team CSS
   position: absolute;
   left: 0;
   top: 50%;
-  background: #f9f6f6;
+  background: #F5F7FF;
   height: 10px;
   width: 100%;
   z-index: -1;
@@ -1585,10 +1585,10 @@ Fun Facts CSS
   margin-top: -27px;
 }
 .contact-cta-box .btn-primary {
-  box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
+  box-shadow: 0 13px 27px 0 rgba(91, 139, 245, 0.25);
 }
 .contact-cta-box .btn-primary:hover, .contact-cta-box .btn-primary:focus {
-  box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
+  box-shadow: 0 13px 27px 0 rgba(91, 139, 245, 0.25);
 }
 
 /*==========================================
@@ -1663,7 +1663,7 @@ Pricing CSS
   text-decoration: line-through;
 }
 .pricing-table .pricing-features ul li.active {
-  color: #666666;
+  color: #6B7280;
   text-decoration: none;
 }
 .pricing-table:hover {
@@ -1684,10 +1684,10 @@ Pricing CSS
   color: #ffffff;
 }
 .pricing-table.active-plan .btn-primary {
-  box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
+  box-shadow: 0 13px 27px 0 rgba(91, 139, 245, 0.25);
 }
 .pricing-table.active-plan .btn-primary::after, .pricing-table.active-plan .btn-primary::before {
-  box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
+  box-shadow: 0 13px 27px 0 rgba(91, 139, 245, 0.25);
 }
 
 /*================================================
@@ -1841,10 +1841,10 @@ Ready To Talk CSS
   font-size: 16px;
 }
 .ready-to-talk .btn-primary {
-  box-shadow: 0 5px 20px 0 rgba(198, 121, 227, 0.25);
+  box-shadow: 0 5px 20px 0 rgba(91, 139, 245, 0.25);
 }
 .ready-to-talk .btn-primary:hover, .ready-to-talk .btn-primary:focus {
-  box-shadow: 0 5px 20px 0 rgba(68, 206, 111, 0.25);
+  box-shadow: 0 5px 20px 0 rgba(91, 139, 245, 0.25);
 }
 .ready-to-talk span a {
   margin-left: 15px;
@@ -2297,7 +2297,7 @@ Blog Details CSS
   line-height: 38px;
   border: 1px solid #eeeeee;
   border-radius: 50%;
-  color: #0e314c;
+  color: #111827;
 }
 .blog-details-area .blog-details .article-content .share-post ul li a:hover, .blog-details-area .blog-details .article-content .share-post ul li a:focus {
   color: #ffffff;
@@ -2356,7 +2356,7 @@ Blog Details CSS
   text-transform: uppercase;
 }
 .blog-details-area .comments-area .single-comment .comment-content span {
-  color: #666666;
+  color: #6B7280;
 }
 .blog-details-area .comments-area .single-comment .comment-content p {
   margin-bottom: 15px;
@@ -2397,7 +2397,7 @@ Project Details CSS
   top: 0;
   width: 100%;
   height: 100%;
-  background: #0e314c;
+  background: #111827;
   opacity: 0;
   visibility: hidden;
   transition: 0.4s;
@@ -2457,7 +2457,7 @@ Project Details CSS
 }
 .project-details-desc .project-details-information .single-info-box ul li a {
   margin-right: 4px;
-  color: #666666;
+  color: #6B7280;
 }
 .project-details-desc .project-details-information .single-info-box ul li a svg {
   width: 18px;
@@ -2497,7 +2497,7 @@ Contact CSS
   margin-bottom: 0;
 }
 .contact-info-box p a {
-  color: #666666;
+  color: #6B7280;
 }
 .contact-info-box:hover {
   transform: translateY(-5px);
@@ -2568,7 +2568,7 @@ Footer CSS
   margin-bottom: 10px;
 }
 .single-footer-widget ul.list li a {
-  color: #666666;
+  color: #6B7280;
 }
 .single-footer-widget ul.list li a:hover {
   padding-left: 7px;
@@ -2582,7 +2582,7 @@ Footer CSS
 }
 .single-footer-widget ul.footer-contact-info li {
   position: relative;
-  color: #666666;
+  color: #6B7280;
   margin-bottom: 8px;
   padding-left: 25px;
 }
@@ -2599,7 +2599,7 @@ Footer CSS
   margin-bottom: 0;
 }
 .single-footer-widget ul.footer-contact-info li a {
-  color: #666666;
+  color: #6B7280;
 }
 .single-footer-widget ul.social-links li {
   display: inline-block;
@@ -2692,7 +2692,7 @@ Go Top CSS
   display: block;
 }
 .search-form .search-field {
-  background-color: #f8f8f8;
+  background-color: #F5F7FF;
   border-color: #eee;
   height: 50px;
   padding: 6px 18px;
@@ -3088,7 +3088,7 @@ New pages style (06/25/2019)
   list-style-type: none;
 }
 .single-pricing-table .pricing-features ul li {
-  color: #666666;
+  color: #6B7280;
   margin-bottom: 12px;
 }
 .single-pricing-table .pricing-features ul li:last-child {
@@ -3098,10 +3098,10 @@ New pages style (06/25/2019)
   width: 15px;
 }
 .single-pricing-table.active-plan .btn-primary {
-  box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
+  box-shadow: 0 13px 27px 0 rgba(91, 139, 245, 0.25);
 }
 .single-pricing-table.active-plan .btn-primary::after, .single-pricing-table.active-plan .btn-primary::before {
-  box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
+  box-shadow: 0 13px 27px 0 rgba(91, 139, 245, 0.25);
 }
 
 /* Testimonails Slider */
@@ -3223,7 +3223,7 @@ New pages style (06/25/2019)
   width: 55px;
   height: 55px;
   line-height: 55px;
-  background: #cdf1d8;
+  background: #E8EDFF;
   display: inline-block;
   border-radius: 50%;
   transition: 0.5s;
@@ -3297,11 +3297,11 @@ New pages style (06/25/2019)
   top: -15px;
 }
 .cta-right-content .buy-btn .btn-primary {
-  box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
+  box-shadow: 0 13px 27px 0 rgba(91, 139, 245, 0.25);
 }
 .cta-right-content .buy-btn .btn-primary::after, .cta-right-content .buy-btn .btn-primary::before {
   background: #ffffff;
-  box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
+  box-shadow: 0 13px 27px 0 rgba(91, 139, 245, 0.25);
 }
 
 /* Features Details CSS */
@@ -3317,7 +3317,7 @@ New pages style (06/25/2019)
 }
 .features-details-desc ul li {
   margin-bottom: 5px;
-  color: #666666;
+  color: #6B7280;
   position: relative;
   padding-left: 18px;
 }
@@ -3358,7 +3358,7 @@ New pages style (06/25/2019)
   display: block;
   padding: 12px 20px 12px 55px;
   text-decoration: none;
-  color: #0e314c;
+  color: #111827;
   position: relative;
   border-bottom: 1px solid #ffffff;
   font-size: 15px;
@@ -3559,7 +3559,7 @@ New pages style (06/25/2019)
   height: 45px;
   padding: 5px 15px;
   font-size: 13px;
-  color: #666666;
+  color: #6B7280;
 }
 .woocommerce .woocommerce-MyAccount-content .edit-account .woocommerce-form-row span {
   font-size: 13px;
@@ -3652,8 +3652,8 @@ New pages style (06/25/2019)
 .single-products .products-content .add-to-cart-btn {
   display: block;
   width: 100%;
-  color: #0e314c;
-  border: 1px solid #0e314c;
+  color: #111827;
+  border: 1px solid #111827;
   padding: 15px;
   text-transform: uppercase;
   font-weight: 500;
@@ -3733,7 +3733,7 @@ New pages style (06/25/2019)
   margin-right: -15px;
 }
 .single-products:hover .products-content .add-to-cart-btn, .single-products:focus .products-content .add-to-cart-btn {
-  background-color: #0e314c;
+  background-color: #111827;
   color: #ffffff;
 }
 .single-products:hover .products-image::before, .single-products:focus .products-image::before {
@@ -3814,7 +3814,7 @@ New pages style (06/25/2019)
   margin-bottom: 15px;
 }
 .quick-view-modal .modal-content .products-content .price span {
-  color: #666666;
+  color: #6B7280;
 }
 .quick-view-modal .modal-content .products-content form .quantity {
   display: inline-block;
@@ -3913,7 +3913,7 @@ New pages style (06/25/2019)
   font-weight: 600;
 }
 .products-details .price span {
-  color: #666666;
+  color: #6B7280;
 }
 .products-details .rating {
   padding: 0;
@@ -3963,7 +3963,7 @@ New pages style (06/25/2019)
 .products-details form .add-to-wishlist-btn {
   margin-left: 5px;
   background: transparent;
-  color: #0e314c;
+  color: #111827;
   border: 1px solid #eeeeee;
   position: relative;
   top: -3px;
@@ -3985,11 +3985,11 @@ New pages style (06/25/2019)
   margin-top: 20px;
 }
 .products-details form .buy-btn .btn-primary {
-  box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
+  box-shadow: 0 13px 27px 0 rgba(91, 139, 245, 0.25);
   padding: 10px 30px;
 }
 .products-details form .buy-btn .btn-primary::after, .products-details form .buy-btn .btn-primary::before {
-  box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
+  box-shadow: 0 13px 27px 0 rgba(91, 139, 245, 0.25);
 }
 .products-details .custom-payment-options {
   margin-top: 20px;
@@ -4141,7 +4141,7 @@ New pages style (06/25/2019)
   border: 1px solid #eeeeee;
   border-bottom: none;
   padding: 10px 15px;
-  color: #666666;
+  color: #6B7280;
 }
 .products-details-tabs .content .additional-information li:last-child {
   border-bottom: 1px solid #eeeeee;
@@ -4226,14 +4226,14 @@ New pages style (06/25/2019)
 .products-details-tabs .content .products-reviews .commentlist li .comment-text p.meta {
   font-size: 14px !important;
   margin-bottom: 5px !important;
-  color: #0e314c !important;
+  color: #111827 !important;
 }
 .products-details-tabs .content .products-reviews .comment-reply-title {
   font-size: 18px;
   line-height: 30px;
   margin-top: 0;
   font-weight: 500;
-  color: #0e314c;
+  color: #111827;
 }
 .products-details-tabs .content .products-reviews p.stars {
   margin-bottom: 15px !important;
@@ -4285,7 +4285,7 @@ New pages style (06/25/2019)
 }
 .cart-table table tbody tr td {
   vertical-align: middle;
-  color: #666666;
+  color: #6B7280;
   padding-left: 0;
   padding-right: 0;
   border-color: #eaedff;
@@ -4299,7 +4299,7 @@ New pages style (06/25/2019)
   width: 60px;
 }
 .cart-table table tbody tr td.product-name a {
-  color: #666666;
+  color: #6B7280;
   font-weight: 500;
   display: inline-block;
 }
@@ -4368,7 +4368,7 @@ New pages style (06/25/2019)
 .cart-totals ul li {
   border: 1px solid #eaedff;
   padding: 10px 15px;
-  color: #0e314c;
+  color: #111827;
   overflow: hidden;
 }
 .cart-totals ul li:first-child {
@@ -4379,7 +4379,7 @@ New pages style (06/25/2019)
 }
 .cart-totals ul li span {
   float: right;
-  color: #666666;
+  color: #6B7280;
 }
 .cart-totals .shop_table th, .cart-totals .shop_table td {
   border: 1px solid #eee;
@@ -4416,7 +4416,7 @@ New pages style (06/25/2019)
 .user-actions span a {
   font-weight: 500;
   display: inline-block;
-  color: #0e314c;
+  color: #111827;
 }
 
 .checkout-area .title {
@@ -4432,7 +4432,7 @@ New pages style (06/25/2019)
 }
 .billing-details .form-group label {
   display: block;
-  color: #666666;
+  color: #6B7280;
   margin-bottom: 8px;
   font-size: 14px;
   font-weight: 400;
@@ -4450,7 +4450,7 @@ New pages style (06/25/2019)
   margin-bottom: 15px;
 }
 .billing-details .form-check .form-check-label {
-  color: #666666;
+  color: #6B7280;
 }
 .billing-details .form-check label {
   font-size: 14px;
@@ -4476,16 +4476,16 @@ New pages style (06/25/2019)
 }
 .order-details .order-table table tbody tr td {
   vertical-align: middle;
-  color: #666666;
+  color: #6B7280;
   border-color: #eaedff;
   font-size: 14px;
 }
 .order-details .order-table table tbody tr td.product-name a {
-  color: #666666;
+  color: #6B7280;
   display: inline-block;
 }
 .order-details .order-table table tbody tr td.order-subtotal span, .order-details .order-table table tbody tr td.order-shipping span, .order-details .order-table table tbody tr td.total-price span {
-  color: #0e314c;
+  color: #111827;
   font-weight: 500;
 }
 .order-details .woocommerce-checkout-payment ul {
@@ -4517,7 +4517,7 @@ New pages style (06/25/2019)
   cursor: pointer;
   display: block;
   font-weight: 600;
-  color: #0e314c;
+  color: #111827;
   position: relative;
   margin-bottom: 8px;
 }
@@ -4626,7 +4626,7 @@ New pages style (06/25/2019)
   color: #fff;
 }
 .widget-area .widget_shopping_cart .woocommerce-mini-cart__buttons .button.checkout {
-  background-color: #0e314c;
+  background-color: #111827;
   color: #fff;
   margin-left: 10px;
 }
@@ -4786,7 +4786,7 @@ New pages style (06/25/2019)
   display: block;
 }
 .widget-area .widget_search form .search-field {
-  background-color: #f8f8f8;
+  background-color: #F5F7FF;
   border-color: #eee;
   height: 50px;
   padding: 6px 18px;
@@ -5722,7 +5722,7 @@ pre.wp-block-preformatted {
 }
 
 .wp-block-verse {
-  font-family: "Poppins", sans-serif !important;
+  font-family: "Inter", sans-serif !important;
   font-size: 16px !important;
 }
 
@@ -6071,7 +6071,7 @@ pre.wp-block-preformatted {
   display: block;
 }
 .single-footer-widget .search-form form .search-field {
-  background-color: #f8f8f8;
+  background-color: #F5F7FF;
   border-color: #eee;
   height: 50px;
   padding: 6px 18px;
@@ -6517,7 +6517,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light.startp-wp-adminbar.is-sticky {
   max-width: 50%;
   width: 100%;
   margin-top: 25px;
-  color: #666666;
+  color: #6B7280;
   position: relative;
   padding-right: 10px;
   padding-left: 10px;
@@ -6626,7 +6626,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light.startp-wp-adminbar.is-sticky {
   height: 100%;
   background: #ffffff;
   z-index: -1;
-  border: 1px dashed #cdf1d8;
+  border: 1px dashed #E8EDFF;
 }
 .single-repair-services::after {
   position: absolute;
@@ -6640,7 +6640,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light.startp-wp-adminbar.is-sticky {
   z-index: -1;
   opacity: 0;
   visibility: hidden;
-  border: 1px dashed #cdf1d8;
+  border: 1px dashed #E8EDFF;
 }
 .single-repair-services h3 {
   font-size: 18px;
@@ -6671,7 +6671,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light.startp-wp-adminbar.is-sticky {
   height: 35px;
   text-align: center;
   line-height: 35px;
-  color: #0e314c;
+  color: #111827;
   border-radius: 50%;
 }
 .single-repair-services a svg {
@@ -6778,7 +6778,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light.startp-wp-adminbar.is-sticky {
 .single-repair-box {
   text-align: center;
   background-color: #ffffff;
-  border: 1px dashed #cdf1d8;
+  border: 1px dashed #E8EDFF;
   padding: 30px;
   position: relative;
   z-index: 1;
@@ -6797,7 +6797,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light.startp-wp-adminbar.is-sticky {
   background-color: #eef0f3;
   height: 40px;
   line-height: 40px;
-  color: #0e314c;
+  color: #111827;
   border-radius: 50%;
   text-align: center;
 }
@@ -7047,7 +7047,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light.startp-wp-adminbar.is-sticky {
   padding: 40px 30px;
   text-align: center;
   background-color: #ffffff;
-  border: 1px dashed #cdf1d8;
+  border: 1px dashed #E8EDFF;
 }
 .single-iot-services::after {
   position: absolute;
@@ -7092,7 +7092,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light.startp-wp-adminbar.is-sticky {
   height: 35px;
   line-height: 35px;
   text-align: center;
-  color: #0e314c;
+  color: #111827;
   border-radius: 50%;
 }
 .single-iot-services a svg {
@@ -7195,7 +7195,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light.startp-wp-adminbar.is-sticky {
 .single-iot-box {
   text-align: center;
   background-color: #ffffff;
-  border: 1px dashed #cdf1d8;
+  border: 1px dashed #E8EDFF;
   padding: 30px;
   position: relative;
   z-index: 1;
@@ -7214,7 +7214,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light.startp-wp-adminbar.is-sticky {
   background-color: #eef0f3;
   height: 40px;
   line-height: 40px;
-  color: #0e314c;
+  color: #111827;
   text-align: center;
   border-radius: 50%;
 }
@@ -7260,7 +7260,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light.startp-wp-adminbar.is-sticky {
 }
 .cart-link i {
   font-size: 19px;
-  color: #4a6f8a;
+  color: #6B7280;
   line-height: 2;
 }
 .cart-link span {
@@ -7643,7 +7643,7 @@ ML About CSS
 .ml-about-content .bar {
   height: 5px;
   width: 90px;
-  background: #cdf1d8;
+  background: #E8EDFF;
   margin: 20px 0;
   position: relative;
   border-radius: 30px;
@@ -7746,12 +7746,12 @@ Pricing CSS
   font-size: 15px;
 }
 .pricing-tab .tabs li a:hover {
-  color: #0e314c;
+  color: #111827;
   background: linear-gradient(to left bottom, #fffcff, #fbfaff, #effbff, #e0fdff, #d5fefd);
 }
 .pricing-tab .tabs li.current a {
   color: #ffffff;
-  background: #0e314c !important;
+  background: #111827 !important;
 }
 .pricing-tab .tabs li:nth-child(1) a {
   border-radius: 5px 0 0 5px;
@@ -7890,7 +7890,7 @@ ML Feedback CSS
 }
 .single-ml-feedback-item p {
   margin-bottom: 0;
-  color: #4a6f8a;
+  color: #6B7280;
 }
 .single-ml-feedback-item .rating {
   margin-top: 10px;
@@ -7990,7 +7990,7 @@ Blog CSS
   display: inline-block;
   position: relative;
   margin-right: 12px;
-  color: #666666;
+  color: #6B7280;
   font-size: 14px;
 }
 .single-blog-post-box .entry-post-content .entry-meta ul li::before {
@@ -7999,13 +7999,13 @@ Blog CSS
   right: -7px;
   top: 50%;
   transform: rotate(14deg) translateY(-50%);
-  background: #666666;
+  background: #6B7280;
   width: 1px;
   height: 13px;
 }
 .single-blog-post-box .entry-post-content .entry-meta ul li a {
   display: inline-block;
-  color: #666666;
+  color: #6B7280;
 }
 .single-blog-post-box .entry-post-content .entry-meta ul li:last-child {
   margin-right: 0;
@@ -8076,7 +8076,7 @@ Free Trial Area CSS
   color: #ffffff;
   border: none;
   outline: 0;
-  background-color: #0e314c;
+  background-color: #111827;
   border-radius: 30px;
   padding-top: 3px;
   padding-left: 20px;
@@ -8306,7 +8306,7 @@ Agency Main Banner CSS
   text-transform: uppercase;
   display: block;
   font-size: 16px;
-  color: #666666;
+  color: #6B7280;
   margin-bottom: 8px;
 }
 .agency-banner-content h1 {
@@ -8419,7 +8419,7 @@ Agency About CSS
 .agency-about-content .bar {
   height: 5px;
   width: 90px;
-  background: #cdf1d8;
+  background: #E8EDFF;
   margin: 20px 0;
   position: relative;
   border-radius: 30px;
@@ -8532,7 +8532,7 @@ Testimonials CSS
 }
 .single-testimonials-item p {
   margin-bottom: 0;
-  color: #4a6f8a;
+  color: #6B7280;
   font-size: 15px;
 }
 .single-testimonials-item .client-info {
@@ -8702,10 +8702,10 @@ Blog CSS
   display: inline-block;
   margin-right: 15px;
   position: relative;
-  color: #666666;
+  color: #6B7280;
 }
 .single-blog-post-item .post-content .post-meta li a {
-  color: #666666;
+  color: #6B7280;
   text-transform: capitalize;
 }
 .single-blog-post-item .post-content .post-meta li::before {
@@ -8714,7 +8714,7 @@ Blog CSS
   right: -10px;
   top: 4px;
   height: 12px;
-  background-color: #666666;
+  background-color: #6B7280;
   width: 1px;
   transform: rotate(5deg);
 }
@@ -8802,7 +8802,7 @@ Agency CTA CSS
   opacity: 0;
   visibility: hidden;
   width: 100%;
-  background: linear-gradient(135deg, #23bdb8 0, #43e794 100%);
+  background: linear-gradient(135deg, #23bdb8 0, #1DCFAA 100%);
   left: 0;
   border-radius: 4px;
 }
@@ -8884,7 +8884,7 @@ Agency Portfolio Main Banner CSS
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: #666666;
+  color: #6B7280;
   margin-bottom: 10px;
 }
 .portfolio-banner-content h1 {
@@ -8912,7 +8912,7 @@ Agency Portfolio Main Banner CSS
 .agency-portfolio-home-slides.owl-theme .owl-nav [class*=owl-] {
   margin: 0;
   background-color: #e1e1e1;
-  color: #0e314c;
+  color: #111827;
   width: 50px;
   height: 50px;
   text-align: center;
@@ -9011,7 +9011,7 @@ Our Latest Projects CSS
   font-weight: 600;
 }
 .shorting-menu button:hover, .shorting-menu button.active {
-  color: #0e314c;
+  color: #111827;
 }
 .shorting-menu button:last-child {
   margin-right: 0;
@@ -9071,7 +9071,7 @@ Agency Portfolio Feedback CSS
 Agency Portfolio Partner CSS
 =================================================*/
 .agency-portfolio-partner-area {
-  background-color: #0e314c;
+  background-color: #111827;
 }
 
 .single-agency-portfolio-partner {
@@ -9118,7 +9118,7 @@ Blog CSS
   right: -20px;
   width: 10px;
   height: 1px;
-  background-color: #666666;
+  background-color: #6B7280;
 }
 .single-blog-item .post-content .post-meta li:last-child {
   margin-right: 0;
@@ -9160,7 +9160,7 @@ Creative Area CSS
   margin-left: auto;
 }
 .creative-inner-area .single-counter {
-  background-color: #0e314c;
+  background-color: #111827;
   padding: 40px;
 }
 .creative-inner-area .single-counter h3 {
@@ -9188,7 +9188,7 @@ Creative Area CSS
   padding-right: 0;
 }
 .creative-inner-area .col-lg-3:nth-child(2) .single-counter {
-  background-color: #0e314c;
+  background-color: #111827;
 }
 
 .boxed-layout .startp-nav .container-fluid {
@@ -9706,16 +9706,16 @@ Navbar CSS
   color: #ffffff;
 }
 .navbar-color-white .startp-nav nav .others-option .btn.btn-primary {
-  background: #c679e3;
-  box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
+  background: #5B8BF5;
+  box-shadow: 0 13px 27px 0 rgba(91, 139, 245, 0.25);
 }
 .navbar-color-white .startp-nav nav .others-option .btn.btn-primary::after, .navbar-color-white .startp-nav nav .others-option .btn.btn-primary::before {
   background: var(--MainColor);
-  box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
+  box-shadow: 0 13px 27px 0 rgba(91, 139, 245, 0.25);
 }
 
 .navbar-color-white .startp-nav.is-sticky, #header.navbar-color-white.is-sticky {
-  background-color: #0e314c !important;
+  background-color: #111827 !important;
 }
 
 /*=============================
@@ -9786,7 +9786,7 @@ Big Data Analytics Banner CSS
   left: 20px;
   top: 25px;
   line-height: 55px;
-  background: #cdf1d8;
+  background: #E8EDFF;
   border-radius: 50%;
   transition: 0.5s;
 }
@@ -9824,12 +9824,12 @@ Big Data Analytics Banner CSS
   color: #f78acb;
 }
 .col-lg-4:nth-child(3) .single-banner-boxes .icon {
-  color: #c679e3;
+  color: #5B8BF5;
   background: #edc3fc;
 }
 .col-lg-4:nth-child(3) .single-banner-boxes:hover .icon {
   background-color: #ffffff;
-  color: #c679e3;
+  color: #5B8BF5;
 }
 
 /*=============================
@@ -9921,7 +9921,7 @@ Discover CSS
   box-shadow: unset !important;
   margin-top: 15px;
   background-color: #ffffff;
-  color: #0e314c;
+  color: #111827;
 }
 .discover-content .btn-primary:hover {
   color: #ffffff;
@@ -10002,7 +10002,7 @@ Bigdata Services CSS
   transition: 0.5s;
 }
 .single-services-box-item .learn-more-btn:hover {
-  color: #0e314c;
+  color: #111827;
   padding-left: 0;
   padding-right: 5px;
 }
@@ -10069,7 +10069,7 @@ Fun Facts CSS
   font-weight: normal;
 }
 .funfacts-area .funfact p {
-  color: #0e314c;
+  color: #111827;
 }
 
 .single-funfact {
@@ -10113,21 +10113,21 @@ Feedback CSS
 .single-feedback-box .feedback-desc p {
   margin-bottom: 0;
   position: relative;
-  color: #0e314c;
+  color: #111827;
 }
 .single-feedback-box .feedback-desc p::before {
   content: '"';
   position: relative;
   display: inline-block;
   left: 0;
-  color: #0e314c;
+  color: #111827;
 }
 .single-feedback-box .feedback-desc p::after {
   content: '"';
   position: relative;
   display: inline-block;
   right: 0;
-  color: #0e314c;
+  color: #111827;
 }
 .single-feedback-box .feedback-desc::before {
   content: "";
@@ -10182,7 +10182,7 @@ Feedback CSS
 }
 .single-feedback-box .client-info span {
   display: block;
-  color: #666666;
+  color: #6B7280;
   margin-top: 6px;
 }
 
@@ -10208,7 +10208,7 @@ Industries Serve CSS
   margin-bottom: 30px;
   position: relative;
   overflow: hidden;
-  color: #0e314c;
+  color: #111827;
   border-radius: 5px;
   background-color: #f4f4fb;
   padding: 20px 15px 20px 50px;
@@ -10238,7 +10238,7 @@ Industries Serve CSS
   content: "";
   z-index: -1;
   transition: 0.5s;
-  background-color: #0e314c;
+  background-color: #111827;
 }
 .single-industries-serve-box .link-btn {
   display: block;
@@ -10358,12 +10358,12 @@ Newsletter CSS
   background-color: #ffffff;
   border-radius: 30px;
   transition: 0.5s;
-  color: #0e314c;
+  color: #111827;
   font-size: 14px;
   font-weight: 600;
 }
 .newsletter-content .newsletter-form button:hover {
-  background-color: #0e314c;
+  background-color: #111827;
   color: #ffffff;
 }
 .newsletter-content p {
@@ -10378,7 +10378,7 @@ Newsletter CSS
   right: 0;
   bottom: 0;
   z-index: -1;
-  background: linear-gradient(135deg, #23bdb8 0%, #43e794 100%);
+  background: linear-gradient(135deg, #23bdb8 0%, #1DCFAA 100%);
   display: none;
 }
 
@@ -10519,7 +10519,7 @@ button.wp-block-search__button.wp-element-button {
 .saas-section-title .sub-title2 {
   background-color: #F9F9F9;
   border: 1px solid #CACCEB;
-  color: #0e314c;
+  color: #111827;
   display: inline-block;
   border-radius: 100px;
   padding: 4px 22px;
@@ -10698,7 +10698,7 @@ button.wp-block-search__button.wp-element-button {
   font-weight: 600;
   font-size: 24px;
   margin: 0;
-  color: #666666;
+  color: #6B7280;
   position: absolute;
   bottom: 435px;
   left: -155px;
@@ -10756,7 +10756,7 @@ button.wp-block-search__button.wp-element-button {
 }
 .saas-partner .title {
   font-size: 24px;
-  color: #666666;
+  color: #6B7280;
   margin-bottom: 50px;
 }
 .saas-partner .container-fluid {
@@ -10926,13 +10926,13 @@ button.wp-block-search__button.wp-element-button {
 .valuable-product-feature h3 {
   font-weight: normal;
   font-size: 16px;
-  color: #666666;
+  color: #6B7280;
   line-height: 1.8;
   margin: 0;
 }
 .valuable-product-feature h3 span {
   font-weight: bold;
-  color: #0e314c;
+  color: #111827;
 }
 
 .saas-valuable-product-area .valuable-product-image {
@@ -11056,7 +11056,7 @@ button.wp-block-search__button.wp-element-button {
 .saas-reviewed-on-clutch .sub-title {
   display: block;
   font-size: 16px;
-  color: #666666;
+  color: #6B7280;
   letter-spacing: 2px;
   margin-bottom: 10px;
 }
@@ -11179,7 +11179,7 @@ button.wp-block-search__button.wp-element-button {
 }
 .saas-pricing-table .table tbody tr th:nth-child(3)::before, .saas-pricing-table .table tbody tr th:nth-child(3)::after, .saas-pricing-table .table tbody tr td:nth-child(3)::before, .saas-pricing-table .table tbody tr td:nth-child(3)::after {
   content: "";
-  background-color: #4A6F8A;
+  background-color: #6B7280;
   width: 1px;
   height: 100%;
   position: absolute;
@@ -11191,10 +11191,10 @@ button.wp-block-search__button.wp-element-button {
   right: 0;
 }
 .saas-pricing-table .table tbody tr td {
-  color: #666666;
+  color: #6B7280;
 }
 .saas-pricing-table .table tbody tr .border-bottom {
-  border-bottom: 1px solid #4A6F8A !important;
+  border-bottom: 1px solid #6B7280 !important;
 }
 
 .saas-cto-content {
@@ -11272,7 +11272,7 @@ button.wp-block-search__button.wp-element-button {
 }
 .saas-faq-area .saas-section-title .sub-title {
   background-color: var(--light-green-50);
-  color: #0e314c;
+  color: #111827;
 }
 .saas-faq-area .saas-section-title p a {
   color: var(--SaaSmainColor);
@@ -11352,7 +11352,7 @@ button.wp-block-search__button.wp-element-button {
   font-size: 16px;
 }
 .saas-accordion .accordion-item .accordion-body p strong {
-  color: #0e314c;
+  color: #111827;
 }
 
 .saas-blog-area .row .item:nth-child(2) .sass-blog-card {
@@ -11390,7 +11390,7 @@ button.wp-block-search__button.wp-element-button {
   margin-bottom: 15px;
 }
 .sass-blog-card h3 a {
-  color: #0e314c;
+  color: #111827;
 }
 .sass-blog-card h3 a:hover {
   color: var(--SaaSmainColor);
@@ -11504,7 +11504,7 @@ button.wp-block-search__button.wp-element-button {
   border-radius: 100px;
   background-color: #fff;
   font-size: 16px;
-  color: #0e314c;
+  color: #111827;
   text-align: center;
   line-height: 35px;
   transition: 0.5s;
@@ -11524,7 +11524,7 @@ button.wp-block-search__button.wp-element-button {
 }
 .saas-footer-area .single-footer-widget .footer-contact-info .info-card {
   margin-bottom: 15px;
-  color: #666666;
+  color: #6B7280;
 }
 .saas-footer-area .single-footer-widget .footer-contact-info .info-card svg {
   color: var(--SaaSmainColor);
@@ -11532,7 +11532,7 @@ button.wp-block-search__button.wp-element-button {
   margin-right: 8px;
 }
 .saas-footer-area .single-footer-widget .footer-contact-info .info-card a {
-  color: #666666;
+  color: #6B7280;
   text-decoration: underline;
 }
 .saas-footer-area .single-footer-widget .footer-contact-info .info-card a:hover {
@@ -12386,7 +12386,7 @@ button.wp-block-search__button.wp-element-button {
 .fintech-default-btn {
   background-color: var(--FinTechMain);
   border: 1px solid var(--FinTechMain);
-  color: #0e314c;
+  color: #111827;
   border-radius: 5px;
   padding: 14.5px 35.2px;
   font-weight: 600;
@@ -12406,18 +12406,18 @@ button.wp-block-search__button.wp-element-button {
   padding: 14.5px 35.2px;
   font-weight: 600;
   transition: 0.5s;
-  color: #0e314c;
+  color: #111827;
 }
 .fintech-outline-btn:hover {
   background-color: var(--FinTechMain);
   transform: translateY(-5px);
-  color: #0e314c !important;
+  color: #111827 !important;
 }
 
 .fintech-green-btn {
   background-color: var(--MainColor);
   border: 1px solid var(--MainColor);
-  color: #0e314c;
+  color: #111827;
   border-radius: 5px;
   padding: 14.5px 35.2px;
   font-weight: 600;
@@ -12426,7 +12426,7 @@ button.wp-block-search__button.wp-element-button {
 .fintech-green-btn:hover {
   background-color: var(--FinTechMain);
   border-color: var(--FinTechMain);
-  color: #0e314c;
+  color: #111827;
   transform: translateY(-5px);
 }
 
@@ -12508,7 +12508,7 @@ button.wp-block-search__button.wp-element-button {
   border-radius: 5px;
   text-transform: capitalize;
   padding: 15.5px 33.4px;
-  color: #0e314c;
+  color: #111827;
 }
 .fintech-navbar .startp-nav nav .others-option .btn.btn-primary:hover {
   border-radius: 4px;
@@ -12529,7 +12529,7 @@ button.wp-block-search__button.wp-element-button {
 .fintech-navbar .startp-nav nav .others-option .btn.btn-light:hover {
   border-radius: 4px;
   background-color: var(--FinTechMain);
-  color: #0e314c;
+  color: #111827;
 }
 .fintech-navbar .startp-nav .navbar {
   padding-top: 0;
@@ -12702,7 +12702,7 @@ button.wp-block-search__button.wp-element-button {
 }
 
 .fintech-our-vision {
-  background-color: #F8F8F8;
+  background-color: #F5F7FF;
   padding: 30px;
   position: relative;
   margin-bottom: 30px;
@@ -12802,7 +12802,7 @@ button.wp-block-search__button.wp-element-button {
 }
 
 .fintech-benefits-card {
-  background-color: #F8F8F8;
+  background-color: #F5F7FF;
   padding: 30px;
   border-radius: 100px;
   margin-bottom: 25px;
@@ -12936,14 +12936,14 @@ button.wp-block-search__button.wp-element-button {
   transform: rotate(-3deg);
 }
 .fintech-pricing-area .row .item:nth-child(2) .fintech-pricing-card {
-  background: linear-gradient(180deg, var(--light-green-50) 0%, #F8F8F8 100%);
+  background: linear-gradient(180deg, var(--light-green-50) 0%, #F5F7FF 100%);
 }
 .fintech-pricing-area .row .item:nth-child(3) .fintech-pricing-card {
   transform: rotate(3deg);
 }
 
 .fintech-pricing-card {
-  background-color: #F8F8F8;
+  background-color: #F5F7FF;
   margin-bottom: 30px;
   padding: 30px;
   border-radius: 25px;
@@ -12967,7 +12967,7 @@ button.wp-block-search__button.wp-element-button {
 .fintech-pricing-card .pricing-header h1 span {
   font-weight: normal;
   font-size: 14px;
-  color: #666666;
+  color: #6B7280;
 }
 .fintech-pricing-card .pricing-header p {
   font-size: 16px;
@@ -12989,7 +12989,7 @@ button.wp-block-search__button.wp-element-button {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #666666;
+  color: #6B7280;
   margin-bottom: 10px;
   font-size: 16px;
 }
@@ -13079,7 +13079,7 @@ button.wp-block-search__button.wp-element-button {
 }
 .fintech-blog-card .contant .blog-meta .date p {
   background-color: var(--FinTechMain);
-  color: #0e314c;
+  color: #111827;
   border-radius: 5px 5px 15px 15px;
   padding: 4px 10px;
 }
@@ -13096,13 +13096,13 @@ button.wp-block-search__button.wp-element-button {
 }
 
 .fintech-gradient-bg {
-  background: linear-gradient(87deg, var(--FinTechMain) 0%, #44CE6F 100%);
+  background: linear-gradient(87deg, var(--FinTechMain) 0%, #5B8BF5 100%);
 }
 .fintech-gradient-bg .subscribe-title h2 {
-  color: #0e314c;
+  color: #111827;
 }
 .fintech-gradient-bg .saas-subscribe-form .form-check .form-check-label {
-  color: #0e314c;
+  color: #111827;
 }
 
 .fintech-footer-area {
@@ -13135,7 +13135,7 @@ button.wp-block-search__button.wp-element-button {
   color: #C5C5C5;
 }
 .fintech-footer-area .single-footer-widget .download-app .d-app-card p {
-  color: #666666;
+  color: #6B7280;
 }
 .fintech-footer-area .copyright-area {
   border-top: 1px solid rgba(74, 111, 138, 0.3);
@@ -14003,7 +14003,7 @@ button.wp-block-search__button.wp-element-button {
   line-height: 49px;
   border-radius: 50%;
   position: relative;
-  color: #666666;
+  color: #6B7280;
   transition: 0.5s;
   background-color: #fff;
   border: 1px solid #CFCCFF;
@@ -14242,7 +14242,7 @@ button.wp-block-search__button.wp-element-button {
 .health-tech-pricing-card .pricing-header h1 span {
   font-weight: normal;
   font-size: 14px;
-  color: #666666;
+  color: #6B7280;
 }
 .health-tech-pricing-card .pricing-header p {
   font-size: 16px;
@@ -14264,7 +14264,7 @@ button.wp-block-search__button.wp-element-button {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #666666;
+  color: #6B7280;
   margin-bottom: 10px;
   font-size: 16px;
 }
@@ -14304,7 +14304,7 @@ button.wp-block-search__button.wp-element-button {
   line-height: 49px;
   border-radius: 50%;
   position: relative;
-  color: #666666;
+  color: #6B7280;
   transition: 0.5s;
   background-color: #fff;
   border: 1px solid #CFCCFF;
@@ -14490,7 +14490,7 @@ button.wp-block-search__button.wp-element-button {
   gap: 30px;
 }
 .health-tech-blog-card .contant .blog-meta li {
-  color: #666666;
+  color: #6B7280;
   font-size: 16px;
   position: relative;
   text-transform: capitalize;
@@ -14519,7 +14519,7 @@ button.wp-block-search__button.wp-element-button {
 }
 
 .heal-tech-gradient-bg {
-  background: linear-gradient(86.85deg, var(--SaaSmainColor) 0%, #44CE6F 100.75%);
+  background: linear-gradient(86.85deg, var(--SaaSmainColor) 0%, #5B8BF5 100.75%);
 }
 
 @media only screen and (min-width: 1400px) {
@@ -14577,7 +14577,7 @@ button.wp-block-search__button.wp-element-button {
   color: var(--MainColor);
 }
 .heal-tech-footer-area .single-footer-widget .download-app .d-app-card p {
-  color: #666666;
+  color: #6B7280;
 }
 
 @media only screen and (min-width: 1400px) {
@@ -15225,7 +15225,7 @@ button.wp-block-search__button.wp-element-button {
   margin-bottom: 20px;
 }
 .health-tech-service-details ul li, .health-tech-service-details ol li {
-  color: #666666;
+  color: #6B7280;
   font-size: 16px;
   line-height: 1.8;
   margin-bottom: 10px;
@@ -15266,11 +15266,11 @@ button.wp-block-search__button.wp-element-button {
   align-items: center;
   justify-content: space-between;
   padding: 13px 0;
-  color: #666666;
+  color: #6B7280;
 }
 .heal-tech-sidebar .ht-sidebar-widget.s-category ul li a i {
   font-size: 22px;
-  color: #0e314c;
+  color: #111827;
 }
 .heal-tech-sidebar .ht-sidebar-widget.s-category ul li a:hover {
   color: var(--MainColor);
@@ -15306,7 +15306,7 @@ button.wp-block-search__button.wp-element-button {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #666666;
+  color: #6B7280;
 }
 .heal-tech-sidebar .ht-sidebar-widget.s-contact ul li a i {
   color: var(--MainColor);
@@ -15492,12 +15492,12 @@ button.wp-block-search__button.wp-element-button {
 }
 
 .fintech-pricing-card.active-plan {
-  background: linear-gradient(180deg, var(--light-green-50) 0%, #F8F8F8 100%);
+  background: linear-gradient(180deg, var(--light-green-50) 0%, #F5F7FF 100%);
 }
 .fintech-pricing-card.active-plan .fintech-green-btn {
   background-color: var(--FinTechMain);
   border: 1px solid var(--FinTechMain);
-  color: #0e314c;
+  color: #111827;
   border-radius: 5px;
   padding: 14.5px 35.2px;
   font-weight: 600;
@@ -15597,13 +15597,13 @@ button.wp-block-search__button.wp-element-button {
 }
 
 .fintech-gradient-bg-sec .saas-subscribe-content {
-  background: linear-gradient(87deg, #B0F127 0%, #44CE6F 100%);
+  background: linear-gradient(87deg, #B0F127 0%, #5B8BF5 100%);
 }
 .fintech-gradient-bg-sec .saas-subscribe-content .subscribe-title h2 {
-  color: #0e314c;
+  color: #111827;
 }
 .fintech-gradient-bg-sec .saas-subscribe-form .form-check .form-check-label {
-  color: #0e314c;
+  color: #111827;
 }
 
 .saas-faq-area .saas-section-title .saas-shape2 {

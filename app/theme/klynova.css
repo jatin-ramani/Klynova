@@ -1,0 +1,657 @@
+/* ─────────────────────────────────────────────────────────────
+   Klynova brand layer — loaded last, overrides the recoloured
+   StartNext theme with Klynova typography, dark sections and the
+   4-square grid motif.
+   Palette: Dark #0A0E27 · Blue #5B8BF5 · Teal #1DCFAA · Light #F5F7FF
+            Soft #E8EDFF · Body #6B7280 · Heading #111827
+   ───────────────────────────────────────────────────────────── */
+
+/* ── Typography ─────────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6,
+.section-title h2,
+.hero-content h1 {
+  font-family: "Plus Jakarta Sans", "Inter", sans-serif;
+  letter-spacing: -0.02em;
+  text-transform: none;
+}
+body {
+  line-height: 1.7;
+}
+/* Sentence-case headings (theme applies capitalize/uppercase) */
+.ready-to-talk h3,
+.footer-area .single-footer-widget h3,
+.section-title h2,
+.klynova-service-card h3,
+.klynova-work-body h3,
+.single-features h3,
+.pricing-table .pricing-header h3 {
+  text-transform: none;
+}
+
+/* ── Buttons: teal primary CTA, blue secondary ─────────────────
+   (base hex already remapped; these tune the Klynova feel)        */
+.btn-primary {
+  text-transform: none;
+  font-weight: 600;
+}
+.btn-klynova-outline {
+  display: inline-block;
+  padding: 14px 38px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 4px;
+  background: transparent;
+  transition: all 0.3s ease;
+  margin-left: 12px;
+}
+.btn-klynova-outline:hover {
+  background: #ffffff;
+  color: #0a0e27;
+  border-color: #ffffff;
+}
+
+/* ── 4-square grid motif (recurring brand mark) ────────────────
+   Use <span class="klynova-grid"></span> or as a list bullet.     */
+.klynova-grid {
+  display: inline-grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3px;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+}
+.klynova-grid::before,
+.klynova-grid::after,
+.klynova-grid i,
+.klynova-grid em {
+  content: "";
+  display: block;
+  border-radius: 3px;
+}
+.klynova-grid::before { background: #5b8bf5; }
+.klynova-grid i { background: rgba(91, 139, 245, 0.55); }
+.klynova-grid em { background: rgba(29, 207, 170, 0.85); }
+.klynova-grid::after { background: rgba(91, 139, 245, 0.22); }
+
+/* List bullets using the motif */
+.klynova-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.klynova-list li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 12px;
+  color: #6b7280;
+}
+.klynova-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  background: #5b8bf5;
+  box-shadow:
+    9px 0 0 rgba(91, 139, 245, 0.45),
+    0 9px 0 rgba(29, 207, 170, 0.85),
+    9px 9px 0 rgba(91, 139, 245, 0.2);
+  transform: scale(0.62);
+  transform-origin: left top;
+}
+
+/* ── Section eyebrow tag ───────────────────────────────────────*/
+.section-title .klynova-tag {
+  display: inline-block;
+  color: #1dcfaa;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+/* ── Service cards ─────────────────────────────────────────────*/
+.klynova-service-card {
+  background: #ffffff;
+  border: 1px solid #e8edff;
+  border-radius: 14px;
+  padding: 34px 30px;
+  height: 100%;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.klynova-service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 44px rgba(10, 14, 39, 0.09);
+  border-color: #5b8bf5;
+}
+.klynova-service-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 15px;
+  background: #e8edff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+.klynova-service-icon .klynova-grid {
+  width: 26px;
+  height: 26px;
+  gap: 4px;
+}
+.klynova-service-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+.klynova-service-card > p {
+  color: #6b7280;
+  margin-bottom: 18px;
+}
+
+/* ── Feature cards (re-use theme .single-features) ─────────────*/
+.single-features .icon {
+  width: 60px !important;
+  height: 60px !important;
+  line-height: normal !important;
+  border-radius: 15px !important;
+  background: #e8edff !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+.single-features .icon .klynova-grid {
+  width: 26px;
+  height: 26px;
+  gap: 4px;
+}
+
+/* ── Founder card ──────────────────────────────────────────────*/
+.klynova-founder-card {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #e8edff;
+  border-radius: 18px;
+  padding: 50px 40px;
+}
+.klynova-founder-avatar {
+  width: 92px;
+  height: 92px;
+  border-radius: 22px;
+  margin: 0 auto 22px;
+  background: linear-gradient(135deg, #5b8bf5, #1dcfaa);
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.klynova-founder-card h3 {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+.klynova-founder-role {
+  display: block;
+  color: #5b8bf5;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+.klynova-founder-card p {
+  color: #6b7280;
+  max-width: 620px;
+  margin: 0 auto 24px;
+}
+.klynova-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+.klynova-tags span {
+  background: #e8edff;
+  color: #5b8bf5;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 7px 16px;
+  border-radius: 30px;
+}
+
+/* ── Stats ─────────────────────────────────────────────────────*/
+.funfacts-area .funfact h3.klynova-stat-text {
+  font-size: 26px;
+}
+
+/* ── Portfolio / work cards ────────────────────────────────────*/
+.klynova-work-card {
+  background: #ffffff;
+  border: 1px solid #e8edff;
+  border-radius: 16px;
+  overflow: hidden;
+  height: calc(100% - 30px);
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.klynova-work-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 44px rgba(10, 14, 39, 0.09);
+}
+.klynova-work-thumb {
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.klynova-work-thumb .klynova-grid {
+  width: 56px;
+  height: 56px;
+  gap: 9px;
+}
+.klynova-work-thumb .klynova-grid::before {
+  background: #ffffff;
+}
+.klynova-work-thumb .klynova-grid i {
+  background: rgba(255, 255, 255, 0.6);
+}
+.klynova-work-thumb .klynova-grid em {
+  background: rgba(255, 255, 255, 0.85);
+}
+.klynova-work-thumb .klynova-grid::after {
+  background: rgba(255, 255, 255, 0.3);
+}
+.klynova-work-thumb.v1 {
+  background: linear-gradient(135deg, #0a0e27, #232a5c);
+}
+.klynova-work-thumb.v2 {
+  background: linear-gradient(135deg, #5b8bf5, #1dcfaa);
+}
+.klynova-work-thumb.v3 {
+  background: linear-gradient(135deg, #1dcfaa, #5b8bf5);
+}
+.klynova-work-body {
+  padding: 26px 28px;
+}
+.klynova-work-tag {
+  display: inline-block;
+  background: #e8edff;
+  color: #5b8bf5;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 13px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+.klynova-work-body h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.klynova-work-body p {
+  color: #6b7280;
+  margin: 0;
+}
+.klynova-work-soon {
+  border: 2px dashed #cfd9f5;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.klynova-work-soon > div {
+  padding: 50px 30px;
+}
+.klynova-work-soon .klynova-grid {
+  width: 38px;
+  height: 38px;
+  gap: 6px;
+  margin: 0 auto 18px;
+}
+.klynova-work-soon h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.klynova-work-soon p {
+  color: #6b7280;
+  margin: 0;
+}
+
+/* ── Pricing tweaks ────────────────────────────────────────────*/
+.pricing-table .pricing-header .klynova-plan-sub {
+  display: block;
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: none;
+  opacity: 0.9;
+}
+.pricing-table .price .klynova-price {
+  display: block;
+  font-size: 30px;
+  font-weight: 700;
+  color: #111827;
+}
+.pricing-table .price .klynova-price-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #6b7280;
+  margin-bottom: 4px;
+}
+.pricing-table.active-plan .price .klynova-price {
+  color: #1dcfaa;
+}
+.pricing-table .pricing-features {
+  text-align: left;
+  padding: 0 30px;
+}
+.pricing-table .pricing-features .klynova-list li {
+  text-decoration: none;
+  border-top: none;
+  padding: 0 0 0 28px;
+  margin-bottom: 14px;
+  color: #6b7280;
+}
+
+/* ── Trust cards ───────────────────────────────────────────────*/
+.klynova-trust-card {
+  background: #ffffff;
+  border: 1px solid #e8edff;
+  border-radius: 14px;
+  padding: 34px 30px;
+  height: calc(100% - 30px);
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.klynova-trust-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 44px rgba(10, 14, 39, 0.09);
+}
+.klynova-trust-card .klynova-grid {
+  width: 30px;
+  height: 30px;
+  gap: 5px;
+  margin-bottom: 18px;
+}
+.klynova-trust-card p {
+  font-size: 17px;
+  color: #111827;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ── Preloader on brand dark ───────────────────────────────────*/
+.preloader {
+  background: #0a0e27 !important;
+}
+
+/* ── Card hover micro-interaction ──────────────────────────────*/
+.single-features,
+.single-box,
+.single-services-box {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ── Navbar over the dark hero (white links → dark when sticky) ─*/
+#header:not(.is-sticky) .startp-nav .navbar-nav .nav-item a {
+  color: rgba(255, 255, 255, 0.88);
+}
+#header:not(.is-sticky) .startp-nav .navbar-nav .nav-item a:hover {
+  color: #1dcfaa;
+}
+#header.is-sticky .startp-nav .navbar-nav .nav-item a {
+  color: #111827;
+}
+#header.is-sticky .startp-nav .navbar-nav .nav-item a:hover {
+  color: #5b8bf5;
+}
+
+/* ── Dark sections: hero, final CTA, footer ────────────────────*/
+.klynova-hero {
+  background: #0a0e27 !important;
+  height: auto !important;
+  position: relative;
+  overflow: hidden;
+  padding: 168px 0 110px;
+}
+.klynova-hero .d-table,
+.klynova-hero .d-table-cell {
+  display: block;
+  height: auto;
+}
+.klynova-hero-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(520px 420px at 80% 18%, rgba(91, 139, 245, 0.3), transparent 70%),
+    radial-gradient(440px 380px at 96% 78%, rgba(29, 207, 170, 0.16), transparent 70%),
+    radial-gradient(640px 520px at 4% 4%, rgba(91, 139, 245, 0.12), transparent 70%);
+}
+.klynova-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Hero content */
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #9db4e8;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  background: rgba(91, 139, 245, 0.1);
+  border: 1px solid rgba(91, 139, 245, 0.22);
+  padding: 7px 16px;
+  border-radius: 30px;
+  margin-bottom: 26px;
+}
+.hero-eyebrow-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #1dcfaa;
+  box-shadow: 0 0 0 4px rgba(29, 207, 170, 0.2);
+}
+.klynova-hero .hero-content h1 {
+  color: #ffffff;
+  font-size: 54px;
+  line-height: 1.1;
+  margin-bottom: 22px;
+  max-width: 600px;
+}
+.hero-grad {
+  background: linear-gradient(100deg, #5b8bf5, #1dcfaa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.klynova-hero .hero-content p {
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 17px;
+  line-height: 1.75;
+  max-width: 540px;
+  margin-bottom: 34px;
+}
+.hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 38px;
+}
+.hero-stack {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.hero-stack-label {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 13px;
+  margin-right: 2px;
+}
+.hero-chip-tech {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 13px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 6px 14px;
+  border-radius: 8px;
+}
+
+/* Hero visual — code window */
+.hero-visual {
+  position: relative;
+  margin-left: auto;
+  max-width: 480px;
+}
+.code-window {
+  background: #0d1230;
+  border: 1px solid rgba(91, 139, 245, 0.22);
+  border-radius: 14px;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+  animation: movebounce 7s ease-in-out infinite;
+}
+.code-window-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.cw-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.cw-red { background: #ff5f57; }
+.cw-amber { background: #febc2e; }
+.cw-green { background: #28c840; }
+.cw-title {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 13px;
+  margin-left: 10px;
+  font-family: "Consolas", "SFMono-Regular", monospace;
+}
+.code-window-body {
+  margin: 0;
+  padding: 22px 24px 26px;
+  font-family: "Consolas", "SFMono-Regular", "Menlo", monospace;
+  font-size: 13.5px;
+  line-height: 1.95;
+  overflow-x: auto;
+}
+.code-window-body .cl {
+  display: block;
+  white-space: pre;
+  min-height: 1.95em;
+}
+.code-window-body .ind { padding-left: 22px; }
+.code-window-body .ind2 { padding-left: 44px; }
+.tok-key { color: #c792ea; }
+.tok-str { color: #1dcfaa; }
+.tok-fn { color: #5b8bf5; }
+.tok-var { color: #9db4e8; }
+.tok-punc { color: rgba(255, 255, 255, 0.5); }
+
+/* Floating glass chips */
+.hero-chip {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  background: rgba(15, 20, 48, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 12px 16px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+.hero-chip i {
+  font-size: 20px;
+}
+.hero-chip span {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+.hero-chip strong {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+}
+.hero-chip small {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 11px;
+}
+.hero-chip-1 {
+  top: -22px;
+  right: -8px;
+  animation: movebounce 5s ease-in-out infinite;
+}
+.hero-chip-1 i { color: #1dcfaa; }
+.hero-chip-2 {
+  bottom: -26px;
+  left: -18px;
+  animation: movebounce 6s ease-in-out infinite;
+}
+.hero-chip-2 i { color: #5b8bf5; }
+
+/* Final CTA (re-uses .ready-to-talk) → solid dark */
+.ready-to-talk.klynova-cta {
+  background: #0a0e27;
+}
+.ready-to-talk.klynova-cta::before,
+.ready-to-talk.klynova-cta::after {
+  display: none;
+}
+
+/* Footer → dark */
+.footer-area {
+  background-color: #0a0e27 !important;
+}
+.footer-area .single-footer-widget h3,
+.footer-area .single-footer-widget .widgettitle {
+  color: #ffffff;
+}
+.footer-area .single-footer-widget .textwidget p,
+.footer-area .single-footer-widget .footer-contact-info li {
+  color: rgba(255, 255, 255, 0.65);
+}
+.footer-area .single-footer-widget .menu li a,
+.footer-area .single-footer-widget .footer-contact-info li a {
+  color: rgba(255, 255, 255, 0.65);
+}
+.footer-area .single-footer-widget .menu li a:hover,
+.footer-area .single-footer-widget .footer-contact-info li a:hover {
+  color: #1dcfaa;
+}
+.footer-area .single-footer-widget .footer-contact-info li svg {
+  color: #5b8bf5;
+}
+.footer-area .copyright-area {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+.footer-area .copyright-area p {
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer-area .social-links li a {
+  color: rgba(255, 255, 255, 0.75);
+}

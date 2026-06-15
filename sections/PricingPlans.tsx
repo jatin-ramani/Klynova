@@ -1,29 +1,56 @@
-const FEATURES = [
-  "5 GB Bandwidth",
-  "Highest Speed",
-  "1 GB Storage",
-  "Unlimited Website",
-  "Unlimited Users",
-  "24x7 Great Support",
-  "Data Security and Backups",
-  "Monthly Reports and Analytics",
-];
-
 const plans = [
-  { name: "BASIC PLAN", price: "15.00", active: false, activeCount: 6 },
-  { name: "ADVANCED PLAN", price: "35.00", active: true, activeCount: 7 },
-  { name: "EXPERT PLAN", price: "65.00", active: false, activeCount: 8 },
+  {
+    name: "Starter",
+    sub: "Best for landing pages & MVPs",
+    priceLabel: "Starting at",
+    price: "₹15,000",
+    active: false,
+    features: [
+      "Single page or small site",
+      "Responsive design",
+      "Basic SEO setup",
+      "1 round of revisions",
+    ],
+  },
+  {
+    name: "Standard",
+    sub: "Best for business websites",
+    priceLabel: "Starting at",
+    price: "₹35,000",
+    active: true,
+    features: [
+      "Multi-page website",
+      "CMS integration",
+      "Custom design",
+      "2 rounds of revisions",
+      "1 month of support",
+    ],
+  },
+  {
+    name: "Custom / AI Projects",
+    sub: "Best for web apps & AI integrations",
+    priceLabel: "",
+    price: "Custom quote",
+    active: false,
+    features: [
+      "Full web application",
+      "AI feature integration",
+      "Database & backend",
+      "Ongoing support available",
+    ],
+  },
 ];
 
 export default function PricingPlans() {
   return (
-    <section className="pricing-area ptb-80 bg-f9f6f6">
+    <section className="pricing-area ptb-80">
       <div className="section-title ">
-        <h2>Pricing Plans</h2>
+        <span className="klynova-tag">Pricing</span>
+        <h2>Simple, Project-Based Pricing</h2>
         <div className="bar"></div>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Clear, upfront pricing for every kind of project — no subscriptions,
+          no surprises.
         </p>
       </div>
 
@@ -34,28 +61,31 @@ export default function PricingPlans() {
               <div className={`pricing-table ${plan.active ? "active-plan" : ""}`}>
                 <div className="pricing-header">
                   <h3>{plan.name}</h3>
+                  <span className="klynova-plan-sub">{plan.sub}</span>
                 </div>
 
                 <div className="price">
-                  <span>
-                    <sup>$</sup>
-                    {plan.price} <span>/Mon</span>
+                  <span className="klynova-price">
+                    {plan.priceLabel && (
+                      <small className="klynova-price-label">
+                        {plan.priceLabel}
+                      </small>
+                    )}
+                    {plan.price}
                   </span>
                 </div>
 
                 <div className="pricing-features">
-                  <ul>
-                    {FEATURES.map((feat, i) => (
-                      <li className={i < plan.activeCount ? "active" : ""} key={feat}>
-                        {feat}
-                      </li>
+                  <ul className="klynova-list">
+                    {plan.features.map((f) => (
+                      <li key={f}>{f}</li>
                     ))}
                   </ul>
                 </div>
 
                 <div className="pricing-footer">
-                  <a href="#" className="btn btn-primary">
-                    Select Plan
+                  <a href="#contact" className="btn btn-primary">
+                    Get a Quote
                   </a>
                 </div>
               </div>

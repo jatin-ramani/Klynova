@@ -1,33 +1,25 @@
 import MainBanner from "@/sections/MainBanner";
-import Boxes from "@/sections/Boxes";
-import CloudHosting from "@/sections/CloudHosting";
-import DesignDevelopment from "@/sections/DesignDevelopment";
+import Services from "@/sections/Services";
 import Features from "@/sections/Features";
-import Team from "@/sections/Team";
-import FunFacts from "@/sections/FunFacts";
-import RecentWorks from "@/sections/RecentWorks";
+import Founder from "@/sections/Founder";
+import Stats from "@/sections/Stats";
+import Portfolio from "@/sections/Portfolio";
 import PricingPlans from "@/sections/PricingPlans";
-import Testimonials from "@/sections/Testimonials";
-import ReadyToTalk from "@/sections/ReadyToTalk";
-import Partners from "@/sections/Partners";
-import BlogSection from "@/sections/BlogSection";
+import Trust from "@/sections/Trust";
+import FinalCTA from "@/sections/FinalCTA";
 
 export default function Home() {
   return (
     <>
       <MainBanner />
-      <Boxes />
-      <CloudHosting />
-      <DesignDevelopment />
+      <Services />
       <Features />
-      <Team />
-      <FunFacts />
-      <RecentWorks />
+      <Founder />
+      <Stats />
+      <Portfolio />
       <PricingPlans />
-      <Testimonials />
-      <ReadyToTalk />
-      <Partners />
-      <BlogSection />
+      <Trust />
+      <FinalCTA />
     </>
   );
 }

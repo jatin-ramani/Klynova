@@ -1,0 +1,27 @@
+<svg width="500" height="160" viewBox="0 0 500 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="500" height="160" rx="12" fill="#F5F7FF"/>
+  <text x="20" y="30" font-family="'Inter',system-ui,sans-serif" font-size="13" font-weight="600" fill="#111827">Klynova Brand Colours</text>
+  <!-- Swatches -->
+  <rect x="20" y="45" width="55" height="55" rx="8" fill="#0A0E27"/>
+  <rect x="85" y="45" width="55" height="55" rx="8" fill="#5B8BF5"/>
+  <rect x="150" y="45" width="55" height="55" rx="8" fill="#1DCFAA"/>
+  <rect x="215" y="45" width="55" height="55" rx="8" fill="#F5F7FF" stroke="#dde3f0" stroke-width="0.5"/>
+  <rect x="280" y="45" width="55" height="55" rx="8" fill="#E8EDFF"/>
+  <rect x="345" y="45" width="55" height="55" rx="8" fill="#6B7280"/>
+  <rect x="410" y="45" width="55" height="55" rx="8" fill="#111827"/>
+  <!-- Labels -->
+  <text x="20" y="115" font-family="'Inter',system-ui,sans-serif" font-size="9" fill="#6B7280">#0A0E27</text>
+  <text x="85" y="115" font-family="'Inter',system-ui,sans-serif" font-size="9" fill="#6B7280">#5B8BF5</text>
+  <text x="150" y="115" font-family="'Inter',system-ui,sans-serif" font-size="9" fill="#6B7280">#1DCFAA</text>
+  <text x="215" y="115" font-family="'Inter',system-ui,sans-serif" font-size="9" fill="#6B7280">#F5F7FF</text>
+  <text x="280" y="115" font-family="'Inter',system-ui,sans-serif" font-size="9" fill="#6B7280">#E8EDFF</text>
+  <text x="345" y="115" font-family="'Inter',system-ui,sans-serif" font-size="9" fill="#6B7280">#6B7280</text>
+  <text x="410" y="115" font-family="'Inter',system-ui,sans-serif" font-size="9" fill="#6B7280">#111827</text>
+  <text x="20" y="130" font-family="'Inter',system-ui,sans-serif" font-size="9" fill="#9CA3AF">Primary Dark</text>
+  <text x="85" y="130" font-family="'Inter',system-ui,sans-serif" font-size="9" fill="#9CA3AF">Brand Blue</text>
+  <text x="150" y="130" font-family="'Inter',system-ui,sans-serif" font-size="9" fill="#9CA3AF">Accent Teal</text>
+  <text x="215" y="130" font-family="'Inter',system-ui,sans-serif" font-size="9" fill="#9CA3AF">Light BG</text>
+  <text x="280" y="130" font-family="'Inter',system-ui,sans-serif" font-size="9" fill="#9CA3AF">Soft Blue</text>
+  <text x="345" y="130" font-family="'Inter',system-ui,sans-serif" font-size="9" fill="#9CA3AF">Text Grey</text>
+  <text x="410" y="130" font-family="'Inter',system-ui,sans-serif" font-size="9" fill="#9CA3AF">Dark Text</text>
+</svg>

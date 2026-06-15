@@ -4,13 +4,30 @@ import Preloader from "@/components/Preloader";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GoTop from "@/components/GoTop";
-import DemoToolbar from "@/components/DemoToolbar";
 import Wow from "@/components/Wow";
 
 export const metadata: Metadata = {
-  title: "StartNext – IT Startup & Technology Services",
+  metadataBase: new URL("https://klynova.vercel.app"),
+  title: "Klynova — AI-Powered Software Development Studio",
   description:
-    "Starter develops products that make your business grow. IT Startup & Technology Services.",
+    "Klynova builds intelligent web applications, AI integrations, and digital products using React, Next.js, and modern AI tooling.",
+  icons: {
+    icon: "/logo/klynova-icon-favicon-28.svg",
+  },
+  openGraph: {
+    title: "Klynova — AI-Powered Software Development Studio",
+    description:
+      "Klynova builds intelligent web applications, AI integrations, and digital products using React, Next.js, and modern AI tooling.",
+    url: "https://klynova.vercel.app",
+    siteName: "Klynova",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Klynova — AI-Powered Software Development Studio",
+    description:
+      "Klynova builds intelligent web applications, AI integrations, and digital products using React, Next.js, and modern AI tooling.",
+  },
 };
 
 export default function RootLayout({
@@ -29,7 +46,7 @@ export default function RootLayout({
         />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
         />
       </head>
       <body>
@@ -40,7 +57,6 @@ export default function RootLayout({
         </div>
         <Footer />
         <GoTop />
-        <DemoToolbar />
         <Wow />
       </body>
     </html>

@@ -10,6 +10,7 @@
 @import "./theme/startnext-style.css";
 @import "./theme/brink-pink-style.css";
 @import "./theme/startnext-responsive.css";
+@import "./theme/klynova.css";
 
 /* ─────────────────────────────────────────────────────────────
    Clone-specific helpers (kept minimal; theme CSS owns the look)
@@ -82,8 +83,11 @@ body {
     width: 28px;
     height: 3px;
     border-radius: 3px;
-    background: #0e314c;
+    background: #ffffff;
     transition: 0.3s;
+  }
+  #header.is-sticky .clone-mnav-burger span {
+    background: #111827;
   }
   .clone-mnav-menu {
     display: none;
@@ -114,15 +118,28 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 10px 0;
-    color: #4a6f8a;
+    color: #6b7280;
     font-size: 15px;
     font-weight: 500;
-    text-transform: capitalize;
     border-bottom: 1px solid #eeeeee;
   }
   .clone-mnav-menu li.active > a,
   .clone-mnav-menu li > a:hover {
-    color: #f48665;
+    color: #5b8bf5;
+  }
+  .clone-mnav-menu li > a.mnav-cta {
+    margin-top: 12px;
+    justify-content: center;
+    background: #1dcfaa;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 12px;
+    font-weight: 600;
+  }
+  .clone-mnav-menu li > a.mnav-cta:hover {
+    background: #5b8bf5;
+    color: #ffffff;
   }
   .clone-mnav-menu ul ul {
     display: none;

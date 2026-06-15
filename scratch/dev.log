@@ -1,13 +1,37 @@
 
-> marketting@0.1.0 dev E:\office\marketting
+> klynova@0.1.0 dev E:\office\marketting
 > next dev
 
 ⚠ Port 3000 is in use by process 21292, using available port 3001 instead.
 ▲ Next.js 16.2.9 (Turbopack)
 - Local:         http://localhost:3001
 - Network:       http://192.168.1.47:3001
-✓ Ready in 1632ms
+✓ Ready in 1425ms
 
- GET / 200 in 1819ms (next.js: 508ms, application-code: 1312ms)
- GET / 200 in 622ms (next.js: 9ms, application-code: 613ms)
- GET / 200 in 5.4s (next.js: 209ms, application-code: 5.2s)
+ GET / 200 in 454ms (next.js: 26ms, application-code: 428ms)
+ GET / 200 in 2.1s (next.js: 489ms, application-code: 1603ms)
+ GET / 200 in 626ms (next.js: 15ms, application-code: 612ms)
+✓ Compiled in 2.6s
+ GET / 200 in 532ms (next.js: 16ms, application-code: 516ms)
+ GET / 200 in 1208ms (next.js: 15ms, application-code: 1193ms)
+✓ Compiled in 1031ms
+✓ Compiled in 80ms
+ GET / 200 in 2.4s (next.js: 693ms, application-code: 1740ms)
+ GET / 200 in 1003ms (next.js: 104ms, application-code: 899ms)
+✓ Compiled in 3.1s
+ GET / 200 in 657ms (next.js: 11ms, application-code: 646ms)
+ GET / 200 in 874ms (next.js: 641ms, application-code: 233ms)
+ GET / 200 in 71ms (next.js: 4ms, application-code: 67ms)
+✓ Compiled in 4.4s
+ GET / 200 in 546ms (next.js: 218ms, application-code: 328ms)
+ GET / 200 in 123ms (next.js: 6ms, application-code: 117ms)
+✓ Compiled in 2.5s
+ GET / 200 in 1815ms (next.js: 682ms, application-code: 1133ms)
+ GET / 200 in 464ms (next.js: 17ms, application-code: 447ms)
+✓ Compiled in 244ms
+ GET / 200 in 29.9s (next.js: 3.5s, application-code: 26.4s)
+ GET / 200 in 17.2s (next.js: 181ms, application-code: 17.0s)
+ GET / 200 in 22.9s (next.js: 6.5s, application-code: 16.4s)
+ GET / 200 in 4.8s (next.js: 2.8s, application-code: 2.1s)
+ GET / 200 in 1402ms (next.js: 31ms, application-code: 1371ms)
+ GET / 200 in 780ms (next.js: 31ms, application-code: 749ms)

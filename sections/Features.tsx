@@ -1,51 +1,52 @@
 const features = [
   {
-    icon: "fas fa-handshake",
-    iconBg: "#cdf1d8",
-    iconColor: "#44ce6f",
-    title: "Zero Configuration",
+    icon: "fas fa-bolt",
+    variant: "blue",
+    title: "Fast Turnaround",
+    desc: "We move quickly without compromising on quality — most projects ship in weeks, not months.",
   },
   {
-    icon: "fas fa-code",
-    iconBg: "#fddcef",
-    iconColor: "#f78acb",
-    title: "Code Security",
+    icon: "fas fa-layer-group",
+    variant: "teal",
+    title: "Modern Tech Stack",
+    desc: "Every project is built with current, well-supported technology — no legacy code, no shortcuts.",
   },
   {
-    icon: "fas fa-users",
-    iconBg: "#edc3fc",
-    iconColor: "#c679e3",
-    title: "Team Management",
+    icon: "fas fa-comments",
+    variant: "blue",
+    title: "Direct Communication",
+    desc: "Work directly with the person building your product — no account managers, no middlemen.",
   },
   {
-    icon: "fab fa-ravelry",
-    iconBg: "#f9d2c4",
-    iconColor: "#eb6b3d",
-    title: "Access Controlled",
+    icon: "fas fa-tags",
+    variant: "teal",
+    title: "Transparent Pricing",
+    desc: "Clear, upfront project pricing with no hidden costs or surprise invoices.",
   },
   {
-    icon: "fas fa-bell",
-    iconBg: "#f9d2c4",
-    iconColor: "#eb6b3d",
-    title: "Deadline Reminders",
+    icon: "fas fa-microchip",
+    variant: "blue",
+    title: "AI-Ready Architecture",
+    desc: "Every product we build is structured to integrate AI features now or in the future.",
   },
   {
-    icon: "fas fa-question",
-    iconBg: "#cdf1d8",
-    iconColor: "#44ce6f",
-    title: "Information Retrieval",
+    icon: "fas fa-headset",
+    variant: "teal",
+    title: "Post-Launch Support",
+    desc: "We don't disappear after launch — ongoing support and iteration available.",
   },
 ];
 
 export default function Features() {
   return (
-    <section className="features-area ptb-80 bg-f7fafd">
+    <section className="features-area ptb-80">
       <div className="section-title ">
-        <h2>Our Features</h2>
+        <span className="klynova-tag">Why Klynova</span>
+        <h2>Built Around How You Want to Work</h2>
         <div className="bar"></div>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          A focused, modern approach to building digital products — quality
+          code, honest communication, and AI-ready foundations.
         </p>
       </div>
 
@@ -54,16 +55,11 @@ export default function Features() {
           {features.map((f) => (
             <div className="col-lg-6 col-md-6" key={f.title}>
               <div className="single-features text-unset">
-                <div className="icon" style={{ background: f.iconBg }}>
-                  <i className={f.icon} style={{ color: f.iconColor }}></i>
+                <div className={`icon ${f.variant}`}>
+                  <i className={f.icon}></i>
                 </div>
-                <h3>
-                  <a href="#">{f.title}</a>
-                </h3>
-                <p>
-                  Lorem ipsum dolor sit amet elit, adipiscing, sed do eiusmod
-                  tempor incididunt ut labore dolore magna.
-                </p>
+                <h3>{f.title}</h3>
+                <p>{f.desc}</p>
               </div>
             </div>
           ))}
