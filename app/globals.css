@@ -1,26 +1,12 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+/* ─────────────────────────────────────────────────────────────
+   StartP / StartNext theme — exact CSS port (brink-pink variant)
+   Load order mirrors the live site's <head>:
+   vendors → font-awesome → all (fa6) → startnext-style
+   → brink-pink color override → responsive
+   ───────────────────────────────────────────────────────────── */
+@import "./theme/vendors.min.css";
+@import "./theme/font-awesome.min.css";
+@import "./theme/all.min.css";
+@import "./theme/startnext-style.css";
+@import "./theme/brink-pink-style.css";
+@import "./theme/startnext-responsive.css";
