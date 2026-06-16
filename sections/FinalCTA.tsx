@@ -1,10 +1,10 @@
 export default function FinalCTA() {
   return (
-    <section id="contact" className="ready-to-talk klynova-cta">
+    <section id="contact" className="ready-to-talk">
       <div className="startnext">
         <h3>Have a project in mind?</h3>
         <p>Let&apos;s talk about what you&apos;re building.</p>
-        <a href="mailto:hello@klynova.in" className="btn btn-primary">
+        <a href="/contact" className="btn btn-primary">
           Get in Touch
         </a>
         <span>

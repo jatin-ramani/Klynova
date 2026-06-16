@@ -4,6 +4,8 @@ import Preloader from "@/components/Preloader";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GoTop from "@/components/GoTop";
+import SocialToolbar from "@/components/SocialToolbar";
+import TawkChat from "@/components/TawkChat";
 import Wow from "@/components/Wow";
 
 export const metadata: Metadata = {
@@ -57,7 +59,9 @@ export default function RootLayout({
         </div>
         <Footer />
         <GoTop />
+        <SocialToolbar />
         <Wow />
+        <TawkChat />
       </body>
     </html>
   );

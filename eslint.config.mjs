@@ -20,6 +20,9 @@ const eslintConfig = defineConfig([
     // elements via CSS. next/image would alter that structure, so allow <img>.
     rules: {
       "@next/next/no-img-element": "off",
+      // The theme CSS references literal font-family names, so fonts are loaded
+      // via a <link> rather than next/font.
+      "@next/next/no-page-custom-font": "off",
     },
   },
 ]);

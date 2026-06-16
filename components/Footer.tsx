@@ -1,10 +1,11 @@
+import Link from "next/link";
 import FeatherIcon from "./FeatherIcon";
 
 const links = [
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Work", href: "#work" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Work", href: "/work" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Footer() {
@@ -15,14 +16,14 @@ export default function Footer() {
           <div className="col-lg-5 col-md-6">
             <div className="single-footer-widget">
               <div className="logo">
-                <a href="#home" className="navbar-brand">
+                <Link href="/" className="navbar-brand">
                   <img
-                    src="/logo/klynova-logo-dark.svg"
+                    src="/logo/klynova-logo-light.svg"
                     alt="Klynova"
                     width={170}
                     height={40}
                   />
-                </a>
+                </Link>
               </div>
               <div className="textwidget">
                 <p>
@@ -56,7 +57,7 @@ export default function Footer() {
               <ul className="menu">
                 {links.map((l) => (
                   <li className="menu-item" key={l.label}>
-                    <a href={l.href}>{l.label}</a>
+                    <Link href={l.href}>{l.label}</Link>
                   </li>
                 ))}
               </ul>

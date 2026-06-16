@@ -1,13 +1,38 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const NAV = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Work", href: "#work" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services", mega: true },
+  { label: "Work", href: "/work" },
+  { label: "Contact", href: "/contact" },
+];
+
+const MEGA = [
+  {
+    icon: "fas fa-laptop-code",
+    title: "Web Development",
+    items: ["React & Next.js", "TypeScript apps", "Progressive web apps", "Performance & SEO"],
+  },
+  {
+    icon: "fas fa-robot",
+    title: "AI & Automation",
+    items: ["AI chatbots & assistants", "OpenAI & Anthropic APIs", "Workflow automation", "AI-powered search"],
+  },
+  {
+    icon: "fas fa-pen-nib",
+    title: "Design",
+    items: ["UI/UX design", "Design systems", "Prototyping", "Brand identity"],
+  },
+  {
+    icon: "fas fa-server",
+    title: "Backend & APIs",
+    items: ["REST & GraphQL APIs", "Database design", "Authentication", "Integrations"],
+  },
 ];
 
 export default function Header() {
@@ -15,6 +40,7 @@ export default function Header() {
   const [headroom, setHeadroom] = useState("headroom--top headroom--pinned");
   const [menuOpen, setMenuOpen] = useState(false);
   const lastScroll = useRef(0);
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => {
@@ -31,9 +57,10 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const logo = scrolled
-    ? "/logo/klynova-logo-light.svg"
-    : "/logo/klynova-logo-dark.svg";
+  const logo = "/logo/klynova-logo-light.svg";
+
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   return (
     <header
@@ -44,26 +71,68 @@ export default function Header() {
       <div className={`startp-nav ${scrolled ? "is-sticky" : ""}`}>
         <div className="container">
           <nav className="navbar navbar-expand-md navbar-light">
-            <a href="#home" className="navbar-brand">
+            <Link href="/" className="navbar-brand">
               <img src={logo} alt="Klynova" width={150} height={36} />
-            </a>
+            </Link>
 
             <div className="collapse navbar-collapse mean-menu">
               <ul className="navbar-nav nav ml-auto">
                 {NAV.map((item) => (
-                  <li className="nav-item" key={item.label}>
-                    <a href={item.href} className="nav-link">
+                  <li
+                    className={`nav-item ${item.mega ? "has-mega" : ""}`}
+                    key={item.label}
+                  >
+                    <Link
+                      href={item.href}
+                      className={`nav-link ${isActive(item.href) ? "active" : ""}`}
+                    >
                       {item.label}
-                    </a>
+                      {item.mega && (
+                        <i className="fas fa-chevron-down mega-caret"></i>
+                      )}
+                    </Link>
+
+                    {item.mega && (
+                      <div className="klynova-mega">
+                        <div className="klynova-mega-grid">
+                          {MEGA.map((col) => (
+                            <div className="klynova-mega-col" key={col.title}>
+                              <Link href="/services" className="klynova-mega-head">
+                                <span className="klynova-mega-ic">
+                                  <i className={col.icon}></i>
+                                </span>
+                                {col.title}
+                              </Link>
+                              <ul>
+                                {col.items.map((it) => (
+                                  <li key={it}>
+                                    <Link href="/services">{it}</Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
+                        <div className="klynova-mega-foot">
+                          <span>
+                            Need a custom build or AI integration? Let&apos;s
+                            talk.
+                          </span>
+                          <Link href="/contact" className="btn btn-primary">
+                            Contact Now!
+                          </Link>
+                        </div>
+                      </div>
+                    )}
                   </li>
                 ))}
               </ul>
             </div>
 
             <div className="others-option">
-              <a href="#contact" className="btn btn-primary">
+              <Link href="/contact" className="btn btn-primary">
                 Start a Project
-              </a>
+              </Link>
             </div>
           </nav>
         </div>
@@ -71,9 +140,9 @@ export default function Header() {
 
       {/* Mobile Navbar */}
       <div className="clone-mnav">
-        <a href="#home" className="clone-mnav-logo">
+        <Link href="/" className="clone-mnav-logo">
           <img src={logo} alt="Klynova" width={140} height={34} />
-        </a>
+        </Link>
         <div className="clone-mnav-right">
           <button
             type="button"
@@ -90,20 +159,20 @@ export default function Header() {
         <nav className={`clone-mnav-menu ${menuOpen ? "open" : ""}`}>
           <ul>
             {NAV.map((item) => (
-              <li key={item.label}>
-                <a href={item.href} onClick={() => setMenuOpen(false)}>
+              <li key={item.label} className={isActive(item.href) ? "active" : ""}>
+                <Link href={item.href} onClick={() => setMenuOpen(false)}>
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
             <li>
-              <a
-                href="#contact"
+              <Link
+                href="/contact"
                 className="mnav-cta"
                 onClick={() => setMenuOpen(false)}
               >
                 Start a Project
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>

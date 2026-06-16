@@ -1,25 +1,33 @@
 import MainBanner from "@/sections/MainBanner";
-import Services from "@/sections/Services";
+import ServiceBoxes from "@/sections/ServiceBoxes";
+import CloudHosting from "@/sections/CloudHosting";
+import DesignDevelopment from "@/sections/DesignDevelopment";
 import Features from "@/sections/Features";
-import Founder from "@/sections/Founder";
+import Team from "@/sections/Team";
 import Stats from "@/sections/Stats";
-import Portfolio from "@/sections/Portfolio";
+import RecentWorks from "@/sections/RecentWorks";
 import PricingPlans from "@/sections/PricingPlans";
-import Trust from "@/sections/Trust";
+import Testimonials from "@/sections/Testimonials";
 import FinalCTA from "@/sections/FinalCTA";
+import Partners from "@/sections/Partners";
+import Blog from "@/sections/Blog";
 
 export default function Home() {
   return (
     <>
       <MainBanner />
-      <Services />
+      <ServiceBoxes />
+      <CloudHosting />
+      <DesignDevelopment />
       <Features />
-      <Founder />
+      <Team />
       <Stats />
-      <Portfolio />
+      <RecentWorks />
       <PricingPlans />
-      <Trust />
+      <Testimonials />
       <FinalCTA />
+      <Partners />
+      <Blog />
     </>
   );
 }

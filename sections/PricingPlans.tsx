@@ -43,7 +43,7 @@ const plans = [
 
 export default function PricingPlans() {
   return (
-    <section className="pricing-area ptb-80">
+    <section className="pricing-area ptb-80 bg-f9f6f6">
       <div className="section-title ">
         <span className="klynova-tag">Pricing</span>
         <h2>Simple, Project-Based Pricing</h2>
@@ -65,7 +65,7 @@ export default function PricingPlans() {
                 </div>
 
                 <div className="price">
-                  <span className="klynova-price">
+                  <span>
                     {plan.priceLabel && (
                       <small className="klynova-price-label">
                         {plan.priceLabel}
@@ -76,15 +76,17 @@ export default function PricingPlans() {
                 </div>
 
                 <div className="pricing-features">
-                  <ul className="klynova-list">
+                  <ul>
                     {plan.features.map((f) => (
-                      <li key={f}>{f}</li>
+                      <li className="active" key={f}>
+                        {f}
+                      </li>
                     ))}
                   </ul>
                 </div>
 
                 <div className="pricing-footer">
-                  <a href="#contact" className="btn btn-primary">
+                  <a href="/contact" className="btn btn-primary">
                     Get a Quote
                   </a>
                 </div>
