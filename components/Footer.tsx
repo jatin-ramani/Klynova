@@ -1,91 +1,92 @@
 import Link from "next/link";
-import FeatherIcon from "./FeatherIcon";
+import Image from "next/image";
+import FooterNewsletter from "@/components/FooterNewsletter";
 
-const links = [
+const services = [
+  { label: "Web App Development", href: "/services" },
+  { label: "AI Integration", href: "/services" },
+  { label: "UI/UX Design", href: "/services" },
+  { label: "API & Backend", href: "/services" },
+];
+
+const company = [
   { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
   { label: "Work", href: "/work" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Insights", href: "/blog" },
   { label: "Contact", href: "/contact" },
+];
+
+const socials = [
+  { label: "LinkedIn", icon: "in", href: "#" },
+  { label: "GitHub", icon: "GH", href: "#" },
+  { label: "X", icon: "X", href: "#" },
+  { label: "Instagram", icon: "IG", href: "#" },
 ];
 
 export default function Footer() {
   return (
-    <footer className="footer-area">
+    <footer className="footer">
       <div className="container">
-        <div className="row">
-          <div className="col-lg-5 col-md-6">
-            <div className="single-footer-widget">
-              <div className="logo">
-                <Link href="/" className="navbar-brand">
-                  <img
-                    src="/logo/klynova-logo-light.svg"
-                    alt="Klynova"
-                    width={170}
-                    height={40}
-                  />
-                </Link>
-              </div>
-              <div className="textwidget">
-                <p>
-                  Klynova builds intelligent digital products — websites, web
-                  apps, and AI-powered tools.
-                </p>
-              </div>
-              <ul className="social-links">
-                <li>
-                  <a target="_blank" rel="noopener" href="#" aria-label="LinkedIn">
-                    <i className="fab fa-linkedin-in"></i>
-                  </a>
-                </li>
-                <li>
-                  <a target="_blank" rel="noopener" href="#" aria-label="GitHub">
-                    <i className="fab fa-github"></i>
-                  </a>
-                </li>
-                <li>
-                  <a target="_blank" rel="noopener" href="#" aria-label="Twitter">
-                    <i className="fab fa-twitter"></i>
-                  </a>
-                </li>
-              </ul>
+        <div className="footer-grid">
+          {/* Brand */}
+          <div className="footer-col">
+            <Image src="/logo/klynova-logo-dark.svg" alt="Klynova" width={140} height={36} />
+            <p style={{ color: "rgba(255,255,255,0.6)", fontSize: 14.5, lineHeight: 1.7, margin: "18px 0 22px", maxWidth: 320 }}>
+              A software studio building modern web applications, AI-powered tools, and
+              digital products that grow your business.
+            </p>
+            <div style={{ display: "flex", gap: 10 }}>
+              {socials.map((s) => (
+                <a key={s.label} href={s.href} aria-label={s.label} className="footer-social">
+                  {s.icon}
+                </a>
+              ))}
             </div>
           </div>
 
-          <div className="col-lg-3 col-md-6">
-            <div className="single-footer-widget">
-              <h3>Quick Links</h3>
-              <ul className="menu">
-                {links.map((l) => (
-                  <li className="menu-item" key={l.label}>
-                    <Link href={l.href}>{l.label}</Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          {/* Services */}
+          <div className="footer-col">
+            <h4>Services</h4>
+            {services.map((l) => (
+              <Link key={l.label} href={l.href}>
+                {l.label}
+              </Link>
+            ))}
           </div>
 
-          <div className="col-lg-4 col-md-6">
-            <div className="single-footer-widget">
-              <h3>Get in Touch</h3>
-              <div className="textwidget">
-                <ul className="footer-contact-info">
-                  <li>
-                    <FeatherIcon name="mail" />{" "}
-                    <a href="mailto:hello@klynova.in">hello@klynova.in</a>
-                  </li>
-                  <li>
-                    <FeatherIcon name="map-pin" /> Gujarat, India — working with
-                    clients globally
-                  </li>
-                </ul>
-              </div>
-            </div>
+          {/* Company */}
+          <div className="footer-col">
+            <h4>Company</h4>
+            {company.map((l) => (
+              <Link key={l.label} href={l.href}>
+                {l.label}
+              </Link>
+            ))}
           </div>
 
-          <div className="col-lg-12 col-md-12">
-            <div className="copyright-area">
-              <p>© 2026 Klynova. All rights reserved.</p>
-            </div>
+          {/* Newsletter */}
+          <div className="footer-col">
+            <h4>Stay in the loop</h4>
+            <p style={{ color: "rgba(255,255,255,0.6)", fontSize: 14, lineHeight: 1.6, marginBottom: 6 }}>
+              Occasional notes on building modern products. No spam.
+            </p>
+            <FooterNewsletter />
+            <a
+              href="mailto:hello@klynova.in"
+              style={{ display: "inline-block", marginTop: 18, color: "var(--purple-soft)", fontSize: 14, fontWeight: 600 }}
+            >
+              hello@klynova.in
+            </a>
+          </div>
+        </div>
+
+        <div className="footer-bottom">
+          <span>© {new Date().getFullYear()} Klynova. All rights reserved.</span>
+          <div style={{ display: "flex", gap: 22, alignItems: "center" }}>
+            <a href="#" style={{ color: "rgba(255,255,255,0.5)" }}>Privacy</a>
+            <a href="#" style={{ color: "rgba(255,255,255,0.5)" }}>Terms</a>
+            <span>Built with React &amp; Next.js</span>
           </div>
         </div>
       </div>

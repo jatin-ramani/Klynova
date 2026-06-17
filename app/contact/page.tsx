@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import PageBanner from "@/components/PageBanner";
-import ContactForm from "@/sections/ContactForm";
+import Contact from "@/sections/Contact";
 
 export const metadata: Metadata = {
   title: "Contact — Klynova",
@@ -9,10 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
-  return (
-    <>
-      <PageBanner title="Contact Us" />
-      <ContactForm />
-    </>
-  );
+  return <Contact />;
 }

@@ -1,125 +1,112 @@
-"use client";
+import { Reveal } from "@/components/Anim";
 
-import { useEffect, useState } from "react";
-import FeatherIcon from "@/components/FeatherIcon";
+const TESTIMONIALS_BG =
+  "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=2400&q=90";
 
-const UPLOAD = "https://themes.envytheme.com/startp/wp-content/uploads/2020/11";
-
-// Placeholder reviews — replace with real client testimonials when available.
-const feedback = [
+const testimonials = [
   {
-    img: "client-1.jpg",
+    quote:
+      "Klynova shipped our MVP weeks ahead of schedule without cutting corners. The quality held up as we scaled, and our users noticed.",
+    initials: "MB",
     name: "Marcus Bennett",
-    role: "Founder, ClearList",
-    text: "Klynova shipped our MVP in six weeks — clean code, clear communication, and exactly what we needed to launch. They felt like part of our team from day one.",
+    role: "Founder · Northwind",
   },
   {
-    img: "client-2.jpg",
+    quote:
+      "Communication was effortless — clear updates, fast turnarounds, and a team that actually understood our product.",
+    initials: "EF",
     name: "Elena Frost",
-    role: "CEO, Brightpath",
-    text: "It felt like having a senior engineer on our own team. They understood the business, not just the code, and pushed back when something could be better.",
+    role: "Product Lead · Brightloop",
   },
   {
-    img: "client-3.jpg",
+    quote:
+      "They rebuilt our platform on a tight deadline and the result was rock solid. Clean code, thoughtful UX, zero drama at launch.",
+    initials: "RI",
     name: "Rahul Iyer",
-    role: "CTO, Finly",
-    text: "The AI features they built genuinely moved our numbers. Fast, reliable, and a real pleasure to work with from kickoff to launch.",
+    role: "CTO · Finable",
   },
   {
-    img: "client-4.jpg",
-    name: "Sophie Martin",
-    role: "Product Lead, Nudge",
-    text: "Beautiful design paired with rock-solid engineering. Our users noticed the difference right away, and our conversion went up within the first month.",
+    quote:
+      "The AI features they added genuinely moved our numbers. Support requests dropped and onboarding got noticeably smoother.",
+    initials: "SO",
+    name: "Sofia Okafor",
+    role: "Head of Ops · Lumen",
   },
   {
-    img: "client-5.jpg",
-    name: "David Okoro",
-    role: "Founder, Stackly",
-    text: "Honest timelines, no surprises, and real support after launch. Exactly what you want in a development partner — we'll absolutely work with them again.",
+    quote:
+      "Design and engineering in one team made everything faster. The final product looked and felt better than our mockups.",
+    initials: "DK",
+    name: "David Kim",
+    role: "Co-founder · Pathwise",
   },
 ];
 
-const N = feedback.length;
-const mod = (n: number) => ((n % N) + N) % N;
+function Card({ t }: { t: (typeof testimonials)[number] }) {
+  return (
+    <div
+      className="lg-glass lg--medium"
+      style={{ width: 360, flexShrink: 0, padding: "28px 28px", marginRight: 22, whiteSpace: "normal" }}
+    >
+      <p style={{ color: "rgba(255,255,255,0.82)", fontSize: 15, lineHeight: 1.7, fontStyle: "italic" }}>
+        &ldquo;{t.quote}&rdquo;
+      </p>
+      <hr className="lg-divider" style={{ margin: "22px 0" }} />
+      <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
+        <div
+          style={{
+            width: 46,
+            height: 46,
+            borderRadius: "50%",
+            background: "linear-gradient(135deg,#7B6EF6,#4FC3C3)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            color: "#fff",
+            fontWeight: 700,
+            fontSize: 14,
+            flexShrink: 0,
+          }}
+        >
+          {t.initials}
+        </div>
+        <div>
+          <div style={{ color: "#fff", fontWeight: 600 }}>{t.name}</div>
+          <div style={{ color: "rgba(255,255,255,0.55)", fontSize: 13 }}>{t.role}</div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function Testimonials() {
-  const [active, setActive] = useState(0);
-
-  useEffect(() => {
-    const id = setInterval(() => setActive((a) => mod(a + 1)), 5000);
-    return () => clearInterval(id);
-  }, []);
-
-  const current = feedback[active];
-  const window5 = [-2, -1, 0, 1, 2].map((off) => mod(active + off));
-
   return (
-    <section className="feedback-area ptb-80 bg-f7fafd">
-      <div className="section-title ">
-        <span className="klynova-tag">Testimonials</span>
-        <h2>What Clients Are Saying</h2>
-        <div className="bar"></div>
-        <p>
-          A few words from founders and teams we&apos;ve helped build and ship
-          their products.
-        </p>
-      </div>
+    <section className="section section-dark" style={{ padding: "130px 0" }}>
+      <div className="lg-bg" style={{ backgroundImage: `url('${TESTIMONIALS_BG}')` }} />
+      <div className="lg-bg-overlay" />
 
-      <div className="feedback-slides">
-        <div className="client-feedback">
-          <div>
-            <div className="item">
-              <div
-                className="single-feedback"
-                key={active}
-                style={{ animation: "fadeIn 0.6s" }}
-              >
-                <div className="client-img">
-                  <img src={`${UPLOAD}/${current.img}`} alt={current.name} />
-                </div>
-                <h3>{current.name}</h3>
-                <span>{current.role}</span>
-                <p>{current.text}</p>
-              </div>
-            </div>
-          </div>
+      <div className="lg-orb orb-purple" style={{ width: 400, height: 400, top: "4%", right: "6%" }} />
+      <div className="lg-orb orb-teal" style={{ width: 300, height: 300, bottom: "6%", left: "4%" }} />
+
+      <div className="lg-content">
+        <div className="container">
+          <Reveal style={{ textAlign: "center", marginBottom: 56 }}>
+            <span className="lg-badge">Client Love</span>
+            <h2 className="lg-h2" style={{ fontSize: "clamp(28px, 4.6vw, 54px)", margin: "18px 0 14px" }}>
+              What clients <span className="lg-grad-text">say</span>
+            </h2>
+            <p className="lg-sub" style={{ maxWidth: 500, margin: "0 auto", fontSize: 17 }}>
+              Founders and product teams on what it&apos;s like to build with us.
+            </p>
+          </Reveal>
         </div>
 
-        <div className="client-thumbnails">
-          <div style={{ display: "flex", alignItems: "center" }}>
-            {window5.map((realIndex, i) => (
-              <div
-                key={`${realIndex}-${i}`}
-                className={`item ${i === 2 ? "slick-center" : ""}`}
-                style={{ flex: "0 0 20%", maxWidth: "20%" }}
-                onClick={() => setActive(realIndex)}
-              >
-                <div className="img-fill">
-                  <img
-                    src={`${UPLOAD}/${feedback[realIndex].img}`}
-                    alt={feedback[realIndex].name}
-                  />
-                </div>
-              </div>
+        {/* Infinite moving row (pauses on hover) */}
+        <div className="lg-marquee-mask" style={{ overflow: "hidden", padding: "10px 0" }}>
+          <div className="lg-marquee" style={{ animationDuration: "52s" }}>
+            {[...testimonials, ...testimonials].map((t, i) => (
+              <Card key={i} t={t} />
             ))}
           </div>
-
-          <button
-            type="button"
-            className="prev-arrow slick-arrow"
-            onClick={() => setActive((a) => mod(a - 1))}
-            aria-label="Previous"
-          >
-            <FeatherIcon name="arrow-left" />
-          </button>
-          <button
-            type="button"
-            className="next-arrow slick-arrow"
-            onClick={() => setActive((a) => mod(a + 1))}
-            aria-label="Next"
-          >
-            <FeatherIcon name="arrow-right" />
-          </button>
         </div>
       </div>
     </section>

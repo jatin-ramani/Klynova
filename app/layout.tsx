@@ -1,12 +1,10 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import Preloader from "@/components/Preloader";
-import Header from "@/components/Header";
+import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import GoTop from "@/components/GoTop";
-import SocialToolbar from "@/components/SocialToolbar";
+import LiquidFilters from "@/components/LiquidFilters";
+import SmoothScroll from "@/components/SmoothScroll";
 import TawkChat from "@/components/TawkChat";
-import Wow from "@/components/Wow";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://klynova.vercel.app"),
@@ -24,12 +22,10 @@ export const metadata: Metadata = {
     siteName: "Klynova",
     type: "website",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Klynova — AI-Powered Software Development Studio",
-    description:
-      "Klynova builds intelligent web applications, AI integrations, and digital products using React, Next.js, and modern AI tooling.",
-  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#06060f",
 };
 
 export default function RootLayout({
@@ -52,15 +48,12 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <Preloader />
-        <Header />
-        <div id="content" className="site-content">
-          {children}
-        </div>
-        <Footer />
-        <GoTop />
-        <SocialToolbar />
-        <Wow />
+        <LiquidFilters />
+        <Navbar />
+        <SmoothScroll>
+          <main>{children}</main>
+          <Footer />
+        </SmoothScroll>
         <TawkChat />
       </body>
     </html>

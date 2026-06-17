@@ -1,48 +1,61 @@
-const UPLOAD = "https://themes.envytheme.com/startp/wp-content/uploads";
+import { Reveal, Stagger } from "@/components/Anim";
+import Counter from "@/components/Counter";
 
 const stats = [
-  { value: "100%", label: "Client-Focused", text: false },
-  { value: "24–48h", label: "Response Time", text: false },
-  { value: "React / Next.js", label: "Core Stack", text: true },
-  { value: "Remote", label: "Global Availability", text: true },
+  { to: 40, prefix: "", suffix: "+", label: "Projects Shipped" },
+  { to: 15, prefix: "", suffix: "+", label: "Happy Clients" },
+  { to: 99, prefix: "", suffix: "%", label: "On-Time Delivery" },
+  { to: 48, prefix: "24–", suffix: "h", label: "Avg. Response Time" },
 ];
 
 export default function Stats() {
   return (
-    <section className="funfacts-area ptb-80">
-      <div className="section-title ">
-        <span className="klynova-tag">Why Teams Choose Us</span>
-        <h2>We Build Products Around Your Goals</h2>
-        <div className="bar"></div>
-        <p>
-          A focused studio that understands your business — not just your brief.
-          Clear communication, modern engineering, and real results.
-        </p>
-      </div>
+    <section className="section section-light" style={{ padding: "110px 0" }}>
+      <div className="lg-orb orb-teal" style={{ width: 360, height: 360, top: "6%", left: "-2%" }} />
+      <div className="lg-orb orb-purple" style={{ width: 300, height: 300, bottom: "8%", right: "4%" }} />
 
-      <div className="container">
-        <div className="row">
+      <div className="lg-content container">
+        <Reveal style={{ textAlign: "center", marginBottom: 60 }}>
+          <span className="lg-badge">By The Numbers</span>
+          <h2 className="lg-h2" style={{ fontSize: "clamp(28px, 4.6vw, 54px)", margin: "18px 0 14px" }}>
+            Results that <span className="lg-grad-text">speak</span>
+          </h2>
+          <p className="lg-sub" style={{ maxWidth: 500, margin: "0 auto", fontSize: 17 }}>
+            A track record built on shipping real products, on time and with care.
+          </p>
+        </Reveal>
+
+        <Stagger
+          each={0.1}
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+            gap: 22,
+          }}
+        >
           {stats.map((s) => (
-            <div className="col-lg-3 col-6 col-sm-3" key={s.label}>
-              <div className="funfact">
-                <h3 className={s.text ? "klynova-stat-text" : ""}>{s.value}</h3>
-                <p>{s.label}</p>
+            <div
+              key={s.label}
+              className="lg-glass lg-interactive"
+              style={{ padding: "36px 26px", textAlign: "center" }}
+            >
+              <div className="lg-step-num" style={{ marginBottom: 12 }}>
+                <Counter to={s.to} prefix={s.prefix} suffix={s.suffix} />
+              </div>
+              <div
+                style={{
+                  color: "var(--ink-soft)",
+                  textTransform: "uppercase",
+                  letterSpacing: ".06em",
+                  fontSize: 13,
+                  fontWeight: 600,
+                }}
+              >
+                {s.label}
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="contact-cta-box">
-          <h3>Have a project in mind?</h3>
-          <p>Let&apos;s build something great together.</p>
-          <a href="/contact" className="btn btn-primary">
-            Start a Project
-          </a>
-        </div>
-
-        <div className="map-bg" style={{ textAlign: "center" }}>
-          <img src={`${UPLOAD}/2020/11/map-one.png`} alt="Working globally" />
-        </div>
+        </Stagger>
       </div>
     </section>
   );

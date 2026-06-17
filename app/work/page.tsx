@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
-import PageBanner from "@/components/PageBanner";
-import RecentWorks from "@/sections/RecentWorks";
-import Stats from "@/sections/Stats";
-import Testimonials from "@/sections/Testimonials";
-import FinalCTA from "@/sections/FinalCTA";
+import Work from "@/sections/Work";
+import CTA from "@/sections/CTA";
 
 export const metadata: Metadata = {
   title: "Our Work — Klynova",
@@ -14,11 +11,8 @@ export const metadata: Metadata = {
 export default function WorkPage() {
   return (
     <>
-      <PageBanner title="Our Work" />
-      <RecentWorks />
-      <Stats />
-      <Testimonials />
-      <FinalCTA />
+      <Work />
+      <CTA />
     </>
   );
 }

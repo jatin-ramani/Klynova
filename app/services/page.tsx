@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
-import PageBanner from "@/components/PageBanner";
-import CloudHosting from "@/sections/CloudHosting";
-import DesignDevelopment from "@/sections/DesignDevelopment";
-import Features from "@/sections/Features";
-import PricingPlans from "@/sections/PricingPlans";
-import FinalCTA from "@/sections/FinalCTA";
+import PageHero from "@/components/PageHero";
+import Services from "@/sections/Services";
+import Process from "@/sections/Process";
+import CTA from "@/sections/CTA";
 
 export const metadata: Metadata = {
   title: "Services — Klynova",
@@ -15,12 +13,15 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
-      <PageBanner title="Our Services" />
-      <CloudHosting />
-      <DesignDevelopment />
-      <Features />
-      <PricingPlans />
-      <FinalCTA />
+      <PageHero
+        badge="What We Do"
+        title="Services that"
+        highlight="ship products"
+        subtitle="From web apps and AI integration to design and backend — every layer of your product, handled by one focused team."
+      />
+      <Services />
+      <Process />
+      <CTA />
     </>
   );
 }
